@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-labelledby="t d" font-family="IBM Plex Sans, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
 <title id="t">Omzet van Wise per inkomstenstroom</title><desc id="d">Overboekingen 1.257,0; rente 609,2; kaart 391,6; overig 245,0 miljoen USD.</desc>
 <rect width="760" height="380" fill="#ffffff"/>
-<text x="16" y="32" font-size="19" font-weight="700" fill="#1b1f24">Omzet van Wise per inkomstenstroom</text>
-<text x="16" y="56" font-size="13.5" fill="#5a6270">Miljoen US-dollar en aandeel in de totale omzet (USD 2.502,8 mln) · boekjaar 2026 (apr 2025 – mrt 2026)</text>
-<line x1="222.0" y1="88" x2="222.0" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="222.0" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">0</text>
-<line x1="293.1" y1="88" x2="293.1" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="293.1" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">250</text>
-<line x1="364.1" y1="88" x2="364.1" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="364.1" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">500</text>
-<line x1="435.2" y1="88" x2="435.2" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="435.2" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">750</text>
-<line x1="506.3" y1="88" x2="506.3" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="506.3" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">1.000</text>
-<line x1="577.4" y1="88" x2="577.4" y2="304" stroke="#e3e6ea" stroke-width="1"/>
-<text x="577.4" y="322" font-size="12.5" fill="#5a6270" text-anchor="middle">1.250</text>
-<text x="210" y="118.0" font-size="14" fill="#1b1f24" text-anchor="end">Internationale overboekingen</text>
-<path d="M222,96 h353.3 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-353.3 z" fill="#2a78d6"/>
-<text x="587.3" y="118.0" font-size="14" font-weight="600" fill="#1b1f24">1.257,0 (50%)</text>
-<text x="210" y="166.0" font-size="14" fill="#1b1f24" text-anchor="end">Rente</text>
-<text x="210" y="182.0" font-size="11.5" fill="#5a6270" text-anchor="end">na uitkering aan klanten</text>
-<path d="M222,152 h169.2 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-169.2 z" fill="#2a78d6"/>
-<text x="403.2" y="174.0" font-size="14" font-weight="600" fill="#1b1f24">609,2 (24%)</text>
-<text x="210" y="230.0" font-size="14" fill="#1b1f24" text-anchor="end">Kaart</text>
-<path d="M222,208 h107.3 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-107.3 z" fill="#2a78d6"/>
-<text x="341.3" y="230.0" font-size="14" font-weight="600" fill="#1b1f24">391,6 (16%)</text>
-<text x="210" y="286.0" font-size="14" fill="#1b1f24" text-anchor="end">Overig</text>
-<path d="M222,264 h65.7 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-65.7 z" fill="#2a78d6"/>
-<text x="299.6" y="286.0" font-size="14" font-weight="600" fill="#1b1f24">245,0 (10%)</text>
-<line x1="222" y1="88" x2="222" y2="304" stroke="#5a6270" stroke-width="1"/>
-<text x="16" y="364" font-size="11.5" fill="#5a6270">Bron: Wise Group plc (2026a), Annual report and accounts FY2026, owners.wise.com, geraadpleegd 15-09-2026. Eigen bewerking.</text>
+<text x="16" y="32" font-size="19" font-weight="700" fill="#1c1b18">Omzet van Wise per inkomstenstroom</text>
+<text x="16" y="56" font-size="13.5" fill="#5c5850">Miljoen US-dollar en aandeel in de totale omzet (USD 2.502,8 mln) · boekjaar 2026 (apr 2025 – mrt 2026)</text>
+<line x1="222.0" y1="88" x2="222.0" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="222.0" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">0</text>
+<line x1="293.1" y1="88" x2="293.1" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="293.1" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">250</text>
+<line x1="364.1" y1="88" x2="364.1" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="364.1" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">500</text>
+<line x1="435.2" y1="88" x2="435.2" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="435.2" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">750</text>
+<line x1="506.3" y1="88" x2="506.3" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="506.3" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">1.000</text>
+<line x1="577.4" y1="88" x2="577.4" y2="304" stroke="#e2ded4" stroke-width="1"/>
+<text x="577.4" y="322" font-size="12.5" fill="#5c5850" text-anchor="middle">1.250</text>
+<text x="210" y="118.0" font-size="14" fill="#1c1b18" text-anchor="end">Internationale overboekingen</text>
+<path d="M222,96 h353.3 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-353.3 z" fill="#1f5f5b"/>
+<text x="587.3" y="118.0" font-size="14" font-weight="600" fill="#1c1b18">1.257,0 (50%)</text>
+<text x="210" y="166.0" font-size="14" fill="#1c1b18" text-anchor="end">Rente</text>
+<text x="210" y="182.0" font-size="11.5" fill="#5c5850" text-anchor="end">na uitkering aan klanten</text>
+<path d="M222,152 h169.2 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-169.2 z" fill="#1f5f5b"/>
+<text x="403.2" y="174.0" font-size="14" font-weight="600" fill="#1c1b18">609,2 (24%)</text>
+<text x="210" y="230.0" font-size="14" fill="#1c1b18" text-anchor="end">Kaart</text>
+<path d="M222,208 h107.3 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-107.3 z" fill="#1f5f5b"/>
+<text x="341.3" y="230.0" font-size="14" font-weight="600" fill="#1c1b18">391,6 (16%)</text>
+<text x="210" y="286.0" font-size="14" fill="#1c1b18" text-anchor="end">Overig</text>
+<path d="M222,264 h65.7 a4,4 0 0 1 4,4 v26 a4,4 0 0 1 -4,4 h-65.7 z" fill="#1f5f5b"/>
+<text x="299.6" y="286.0" font-size="14" font-weight="600" fill="#1c1b18">245,0 (10%)</text>
+<line x1="222" y1="88" x2="222" y2="304" stroke="#5c5850" stroke-width="1"/>
+<text x="16" y="364" font-size="11.5" fill="#5c5850">Bron: Wise Group plc (2026a), Annual report and accounts FY2026, owners.wise.com, geraadpleegd 15-09-2026. Eigen bewerking.</text>
 </svg>

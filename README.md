@@ -45,12 +45,15 @@ wise-website/
 ├── advies.html                 Het advies: de twee pijlers en een schets van het overzicht in de app
 ├── achtergrond.html            Achtergrond: begrippen, perioden, beperkingen en bronnen
 ├── css/
-│   └── style.css               Opmaak van alle pagina's (alleen systeemlettertypes)
+│   └── style.css               Opmaak van alle pagina's, met design tokens bovenaan
+├── fonts/                      Lettertypes Fraunces en IBM Plex Sans (lokaal, met OFL-licentie)
 ├── grafieken/
 │   ├── omzet-per-inkomstenstroom.svg   Grafiek 1
 │   └── kosten-overboeking.svg          Grafiek 2
 ├── afbeeldingen/
-│   └── icoon.svg               Eigen icoon voor de kop en het tabblad
+│   ├── icoon.svg               Eigen icoon voor de kop en het tabblad
+│   ├── og-image.png            Voorbeeldafbeelding voor links (Open Graph, 1200 x 630)
+│   └── iconen/                 Lucide-iconen (ISC-licentie), inline gebruikt in de pagina's
 ├── data/
 │   ├── grafiek-1-omzet-per-inkomstenstroom.csv   Cijfers grafiek 1, met bron per regel
 │   └── grafiek-2-kosten-overboeking.csv          Cijfers grafiek 2, met bron per regel
@@ -59,10 +62,26 @@ wise-website/
 └── ai-log.md                   Logmomenten van het gebruik van AI bij het bouwen
 ```
 
+## Vormgeving
+
+Alle kleuren, maten en afstanden staan als variabelen (design tokens) bovenaan `css/style.css`.
+
+- **Kleuren:** een warme neutrale schaal (papier, wit, lijnen, grijze tekst, zwarte tekst), één accentkleur
+  (donker petrol, `#1f5f5b`) en een waarschuwingskleur alleen voor de beperkingen. Bewust niet het groen van Wise.
+- **Lettertypes:** Fraunces voor koppen, IBM Plex Sans voor tekst. Beide staan lokaal in `fonts/`, zodat de site
+  ook zonder internet in de juiste letter verschijnt.
+- **Maten:** tekst 14 / 16 / 20 / 24 / 32 / 48 px; afstanden 4 tot 96 px; hoeken 6 px (knoppen) en 12 px (kaarten);
+  geen schaduwen.
+- **Toegankelijk:** alle tekstkleuren halen WCAG AA, elke link en knop heeft een zichtbare focusrand, er is een
+  link "Naar de inhoud" voor toetsenbordgebruikers, en animaties staan uit bij "beweging beperken".
+
 ## Opmerkingen
 
 - De CSV-bestanden gebruiken een puntkomma en een decimale komma, zodat ze goed openen in een Nederlandse Excel.
-- De grafieken zijn losse SVG-bestanden. Ze zijn scherp op elk scherm en hebben geen JavaScript nodig.
+- De grafieken zijn losse SVG-bestanden. Ze zijn scherp op elk scherm en hebben geen JavaScript nodig. De tekst in
+  de grafieken gebruikt IBM Plex Sans als die op de computer staat, anders de systeemletter: een SVG die als
+  afbeelding wordt geladen kan de lettertypes van de site niet gebruiken.
+- De Open Graph-tags werken pas als de site ooit online staat; lokaal hebben ze geen effect.
 - Onder elke grafiek staan titel, eenheid, periode en bron, een uitleg, de beperkingen en de cijfers als tabel.
 - Het overzicht in de app op `advies.html` is een schets met verzonnen cijfers en geen echt ontwerp van Wise.
 - Dit is geen website van Wise. Het icoon is eigen werk; er is geen logo van Wise gebruikt.

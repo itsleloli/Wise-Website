@@ -3,7 +3,7 @@
 Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het bouwen op 17 oktober 2026
 (macOS, Google Chrome). De tests T6 tot en met T9 moeten nog worden uitgevoerd en ingevuld.
 T10 tot en met T13 zijn uitgevoerd na de verbeterronde op 17 oktober 2026 (Achtergrond-pagina, map `data`,
-opmerking in grafiek 2).
+opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgeving op 17 oktober 2026.
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -21,6 +21,13 @@ opmerking in grafiek 2).
 | T11b | Hertest T11 | Na herstel dezelfde grafiek opnieuw bekeken | Opmerking volledig zichtbaar | Opmerking past op één regel binnen de grafiek | Geslaagd |
 | T12 | Kopiëren en schermbreedte na verbeterronde | Map opnieuw gekopieerd naar `andere map` en T1 herhaald; alle vier de pagina's op 375 px breed gemeten | Alles werkt, geen horizontaal scrollen | 60 links, 0 fout in de kopie; paginabreedte overal 375 px; begrippenlijst stapelt onder elkaar | Geslaagd |
 | T13 | CSV-bestanden | Beide bestanden in `data/` gecontroleerd op kolommen en vergeleken met de tabellen op `cijfers.html` | Zelfde cijfers, elke regel 8 kolommen met bron | Beide bestanden 5 regels, 8 kolommen; cijfers gelijk aan de tabellen | Geslaagd |
+| T14 | Drie schermbreedtes | Alle vier de pagina's bekeken op 1440, 768 en 375 px breed | Alles leesbaar, geen horizontaal scrollen | 1440 en 768: goed. 375: **fout** op `achtergrond.html`, zie T16 | Fout, zie T16 |
+| T15 | Lettertypes zonder internet | Pagina's geopend als bestand (`file://`) en in een gekopieerde map; gecontroleerd welke lettertypes zijn geladen | Fraunces en IBM Plex Sans laden uit `fonts/` | Fraunces en IBM Plex Sans 400/600 geladen; niets van internet | Geslaagd |
+| T16 | Achtergrond op 375 px | Breedte van `achtergrond.html` gemeten op 375 px | Pagina is 375 px breed | **Fout:** pagina was 390 px breed, dus horizontaal scrollen | Fout, zie hieronder |
+| T16b | Hertest T16 | Na herstel dezelfde meting | Pagina is 375 px breed | 375 px; ook de andere drie pagina's 375 px | Geslaagd |
+| T17 | Contrast | Contrast van elke combinatie van tekst- en achtergrondkleur berekend volgens WCAG | Minimaal 4,5:1 (AA) | Laagste waarde 6,0:1 (grijze tekst op bijschrift), hoogste 15,8:1 | Geslaagd |
+| T18 | Toetsenbord | Met Tab door de pagina gegaan | Zichtbare focusrand op elke link en knop | Petrolkleurige rand zichtbaar, ook op de donkere band en in de voet | Geslaagd |
+| T19 | Links en kopie na nieuwe vormgeving | Alle links en bestanden opnieuw gecontroleerd, ook in een kopie in `andere map` | Geen kapotte links | 77 lokale links en bestanden, 0 fout, in beide mappen | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest
@@ -39,6 +46,19 @@ opmerking in grafiek 2).
 - **Hertest (T11b):** grafiek opnieuw bekeken; de opmerking is volledig zichtbaar.
 - **Leerpunt:** tekst in een SVG-grafiek loopt niet vanzelf door naar een volgende regel, dus elke nieuwe tekst in een
   grafiek moet je zelf nakijken.
+
+- **Fout (T16):** op `achtergrond.html` was de pagina op een telefoon 390 px breed in plaats van 375 px. De
+  inhoudsopgave en de inhoud staan in een raster met één kolom van `1fr`. Een kolom van `1fr` wordt nooit smaller
+  dan de breedste inhoud, en de lange bron-URL's en de tabel met perioden waren breder dan het scherm.
+- **Herstel:** de kolom is nu `minmax(0, 1fr)` en de onderdelen in het raster hebben `min-width: 0`, zodat de
+  tabel binnen zijn eigen scrollvak blijft en de URL's afbreken.
+- **Hertest (T16b):** dezelfde meting op 375 px: de pagina is 375 px breed.
+
+## Opmerking bij T14 (grafieken in een verborgen venster)
+
+In het testvenster leken de grafieken op `cijfers.html` eerst niet te laden. Ze hadden `loading="lazy"` en het
+venster stond op de achtergrond, waardoor de browser ze nooit "in beeld" zag. In een zichtbaar venster laden ze wel.
+Voor de zekerheid laadt grafiek 1, die direct onder de kop staat, nu meteen; alleen grafiek 2 laadt pas als je ernaartoe scrolt.
 
 ## Opmerking bij T4
 
