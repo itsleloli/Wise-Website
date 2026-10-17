@@ -2,6 +2,8 @@
 
 Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het bouwen op 17 oktober 2026
 (macOS, Google Chrome). De tests T6 tot en met T9 moeten nog worden uitgevoerd en ingevuld.
+T10 tot en met T13 zijn uitgevoerd na de verbeterronde op 17 oktober 2026 (Achtergrond-pagina, map `data`,
+opmerking in grafiek 2).
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -14,6 +16,11 @@ Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het
 | T6 | Broncijfers | Elk cijfer op de site naast de bron leggen (jaarverslag, kwartaalupdate, Wereldbank) | Alle cijfers kloppen met de bron | *nog invullen* | Open |
 | T7 | Begrijpelijkheid: nieuwe gebruiker | Iemand die de site niet kent, beantwoordt zonder hulp de vraag op de startpagina | Kan de twee oplossingen en de reden noemen | *nog invullen* | Open |
 | T8 | Medestudent legt grafieken uit | Een medestudent legt grafiek 1 en 2 in eigen woorden uit | Uitleg klopt met de boodschap en de beperkingen | *nog invullen: naam, datum, wat er werd gezegd* | Open |
+| T10 | Links na hernoemen | `bronnen.html` hernoemd naar `achtergrond.html`; alle links en ankers opnieuw gecontroleerd, ook naar `data/` en `#aannames` | Geen kapotte links | 60 lokale links en bestanden gecontroleerd, 0 fout; geen verwijzing meer naar `bronnen.html` | Geslaagd |
+| T11 | Grafiek 2: nieuwe opmerking | Opmerking over de Wise-staaf toegevoegd in `kosten-overboeking.svg` en de grafiek bekeken | Opmerking volledig zichtbaar | **Fout:** de opmerking was te lang en liep rechts uit de grafiek ("…metingen voor USD 2") | Fout, zie hieronder |
+| T11b | Hertest T11 | Na herstel dezelfde grafiek opnieuw bekeken | Opmerking volledig zichtbaar | Opmerking past op één regel binnen de grafiek | Geslaagd |
+| T12 | Kopiëren en schermbreedte na verbeterronde | Map opnieuw gekopieerd naar `andere map` en T1 herhaald; alle vier de pagina's op 375 px breed gemeten | Alles werkt, geen horizontaal scrollen | 60 links, 0 fout in de kopie; paginabreedte overal 375 px; begrippenlijst stapelt onder elkaar | Geslaagd |
+| T13 | CSV-bestanden | Beide bestanden in `data/` gecontroleerd op kolommen en vergeleken met de tabellen op `cijfers.html` | Zelfde cijfers, elke regel 8 kolommen met bron | Beide bestanden 5 regels, 8 kolommen; cijfers gelijk aan de tabellen | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest
@@ -24,6 +31,14 @@ Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het
 - **Herstel:** de bronvermelding verdeeld over drie regels en de grafiek 20 px hoger gemaakt (400 naar 420 px).
   In `cijfers.html` is de hoogte van de afbeelding ook aangepast naar 420.
 - **Hertest (T5b):** dezelfde pagina op dezelfde breedte opnieuw bekeken. De bronvermelding is nu volledig zichtbaar.
+
+- **Fout (T11):** de nieuwe opmerking in grafiek 2 was langer dan de breedte van de grafiek, dezelfde soort fout als
+  bij T5. Het einde van de zin viel weg.
+- **Herstel:** de zin ingekort tot "Let op: Wise is een gemiddelde over alle bedragen, niet direct vergelijkbaar met de
+  USD 200-metingen."
+- **Hertest (T11b):** grafiek opnieuw bekeken; de opmerking is volledig zichtbaar.
+- **Leerpunt:** tekst in een SVG-grafiek loopt niet vanzelf door naar een volgende regel, dus elke nieuwe tekst in een
+  grafiek moet je zelf nakijken.
 
 ## Opmerking bij T4
 

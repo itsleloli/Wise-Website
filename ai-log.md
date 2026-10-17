@@ -10,7 +10,7 @@ hebt gecontroleerd en besloten.
 | Nr. | Datum | Prompt (samengevat) | Voorstel van AI | Eigen controle | Keuze (houden / aanpassen / afwijzen) | Leerpunt |
 |---|---|---|---|---|---|---|
 | 1 | 17-10-2026 | Adviesrapport (pdf) en de opdracht voor de website gegeven: "We need to make a website for it." | Vier pagina's (start, cijfers, advies, bronnen); doelgroep management van Wise; twee grafieken als losse SVG-bestanden (omzet per inkomstenstroom, kosten van overmaken); een schets van pijler 2; README, testlog en deze AI-log. Ook zelf getest: links, openen zonder server, kopiëren, 375 px, en een afgekapte bronregel in grafiek 2 gevonden en hersteld. | *zelf invullen* | *zelf invullen* | *zelf invullen* |
-| 2 | | | | | | |
+| 2 | 17-10-2026 | Dia's van de opdracht gedeeld ("Een website voor jouw bezoeker", "Een complete map die lokaal werkt", "Twee grafieken met controleerbare uitleg") en gevraagd de site daarop te verbeteren. | Site vergeleken met de dia's: een Achtergrond-pagina met begrippen, perioden en beperkingen (in plaats van alleen Bronnen), uitleg van vaktermen bij het eerste gebruik, een map `data/` met de cijfers per grafiek als CSV met bron, en een opmerking in grafiek 2 dat de Wise-staaf een ander soort meting is. Daarbij een eigen fout gevonden en hersteld (opmerking liep uit de grafiek, T11). | *zelf invullen* | *zelf invullen* | *zelf invullen* |
 | 3 | | | | | | |
 | 4 | | | | | | |
 | 5 | | | | | | |

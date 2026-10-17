@@ -7,7 +7,7 @@ Lokale website bij het adviesrapport *Money without borders, maar met welke digi
 
 Het management van Wise Group plc, dezelfde lezers als het adviesrapport. De lezer kent de markt
 voor internationale betalingen, maar heeft geen tijd voor het hele rapport. Begrippen als neobank en
-stablecoin worden kort uitgelegd.
+stablecoin worden bij het eerste gebruik kort uitgelegd en staan in de begrippenlijst op `achtergrond.html`.
 
 ## Doel en boodschap
 
@@ -25,7 +25,8 @@ en een persoonlijk overzicht in de app.
 1. Wise Group plc (2026a), *Annual report and accounts FY2026*: grafiek 1 en de kerncijfers.
 2. Wise Group plc (2026b), *Wise Q1 FY27 trading update*: grafiek 2 (samen met World Bank, 2025).
 
-Alle bronnen met URL en raadpleegdatum staan op `bronnen.html`.
+Alle bronnen met URL en raadpleegdatum staan op `achtergrond.html`. De cijfers achter de grafieken staan
+met bron per regel in de map `data/`.
 
 ## De site openen
 
@@ -42,7 +43,7 @@ wise-website/
 ├── index.html                  Start: de vraag, vier kerncijfers en het verhaal in drie stappen
 ├── cijfers.html                De cijfers: grafiek 1 en 2 met uitleg, beperkingen en tabel
 ├── advies.html                 Het advies: de twee pijlers en een schets van het overzicht in de app
-├── bronnen.html                Alle bronnen met URL en raadpleegdatum
+├── achtergrond.html            Achtergrond: begrippen, perioden, beperkingen en bronnen
 ├── css/
 │   └── style.css               Opmaak van alle pagina's (alleen systeemlettertypes)
 ├── grafieken/
@@ -50,6 +51,9 @@ wise-website/
 │   └── kosten-overboeking.svg          Grafiek 2
 ├── afbeeldingen/
 │   └── icoon.svg               Eigen icoon voor de kop en het tabblad
+├── data/
+│   ├── grafiek-1-omzet-per-inkomstenstroom.csv   Cijfers grafiek 1, met bron per regel
+│   └── grafiek-2-kosten-overboeking.csv          Cijfers grafiek 2, met bron per regel
 ├── README.md                   Dit bestand
 ├── testlog.md                  Uitgevoerde tests, gevonden fout en hertest
 └── ai-log.md                   Logmomenten van het gebruik van AI bij het bouwen
@@ -57,6 +61,7 @@ wise-website/
 
 ## Opmerkingen
 
+- De CSV-bestanden gebruiken een puntkomma en een decimale komma, zodat ze goed openen in een Nederlandse Excel.
 - De grafieken zijn losse SVG-bestanden. Ze zijn scherp op elk scherm en hebben geen JavaScript nodig.
 - Onder elke grafiek staan titel, eenheid, periode en bron, een uitleg, de beperkingen en de cijfers als tabel.
 - Het overzicht in de app op `advies.html` is een schets met verzonnen cijfers en geen echt ontwerp van Wise.
