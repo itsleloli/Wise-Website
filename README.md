@@ -56,6 +56,7 @@ wise-website/
 ├── afbeeldingen/
 │   ├── icoon.svg               Eigen icoon voor de kop en het tabblad
 │   ├── og-image.png            Voorbeeldafbeelding voor links (Open Graph, 1200 x 630)
+│   ├── fotos/                  Eigen foto's voor de kopbanden, WebP in 800 en 1600 px breed
 │   └── iconen/                 Lucide-iconen (ISC-licentie), inline gebruikt in de pagina's
 ├── data/
 │   ├── grafiek-1-omzet-per-inkomstenstroom.csv   Cijfers grafiek 1, met bron per regel
@@ -78,10 +79,18 @@ Alle kleuren, maten en afstanden staan als variabelen (design tokens) bovenaan `
 - **Toegankelijk:** alle tekstkleuren halen WCAG AA, elke link en knop heeft een zichtbare focusrand, er is een
   link "Naar de inhoud" voor toetsenbordgebruikers, en animaties staan uit bij "beweging beperken".
 
+## Foto's
+
+De kopbanden van Start, De cijfers en Het advies hebben een eigen foto (vertrekbord, yen, vluchtroute). Ze zijn
+bijgesneden, omgezet naar WebP in twee formaten (de browser kiest zelf het kleinste dat past) en ontdaan van alle
+metadata: de originele iPhone-foto's bevatten GPS-locatie en het toesteltype. De foto's krijgen een petrolkleur
+via CSS, zodat de witte tekst altijd leesbaar blijft. Achtergrond heeft bewust geen foto.
+
 ## Animaties
 
 De site gebruikt GSAP (met ScrollTrigger) voor drie rustige effecten: de kop van elke pagina komt in beeld, de
-grote kerncijfers tellen op vanaf 0, en blokken schuiven iets omhoog als je ernaartoe scrolt.
+grote kerncijfers tellen op vanaf 0, en blokken schuiven iets omhoog als je ernaartoe scrolt. De foto in de kop
+zoomt langzaam uit en scrolt iets trager mee dan de pagina.
 
 - GSAP staat lokaal in `js/vendor/`, dus ook de animaties werken zonder internet.
 - Wie "beweging beperken" aan heeft in het besturingssysteem, ziet geen animaties.

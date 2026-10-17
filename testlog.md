@@ -5,6 +5,7 @@ Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het
 T10 tot en met T13 zijn uitgevoerd na de verbeterronde op 17 oktober 2026 (Achtergrond-pagina, map `data`,
 opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgeving op 17 oktober 2026.
 T20 tot en met T24 zijn uitgevoerd na het toevoegen van de animaties (GSAP) op 17 oktober 2026.
+T25 tot en met T28 zijn uitgevoerd na het toevoegen van de eigen foto's op 17 oktober 2026.
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -34,6 +35,10 @@ T20 tot en met T24 zijn uitgevoerd na het toevoegen van de animaties (GSAP) op 1
 | T22 | Beweging beperken | Pagina geopend met de instelling "beweging beperken" | Geen animatie, alles meteen zichtbaar | Kop, cijfers en blokken direct zichtbaar met de eindwaarden | Geslaagd |
 | T23 | Zonder JavaScript | Zelfde pagina geladen zonder scripts | Alles meteen zichtbaar | 0 verborgen elementen | Geslaagd |
 | T24 | Offline en telefoon met animaties | Links en bestanden gecontroleerd (ook `js/`), en de breedte op 375 px gemeten | Geen kapotte links, geen scripts van internet, geen horizontaal scrollen | 89 lokale links en bestanden, 0 fout; alle scripts lokaal; alle pagina's 375 px | Geslaagd |
+| T25 | Foto's: geen persoonlijke gegevens | Metadata van de originele foto's bekeken, en de WebP-bestanden doorzocht op EXIF, "GPS" en "iPhone" | Geen locatie of toestel in de bestanden op de site | Originelen: GPS-locatie en iPhone-model aanwezig. Websitebestanden: geen EXIF, geen GPS, geen toesteltype | Geslaagd |
+| T26 | Foto's: contrast | Slechtste geval berekend: tekst boven een witte pixel van de foto, op telefoon en desktop | Minimaal 4,5:1 (AA) | Laagste waarde 5,2:1 (lichte tekst op telefoon); vraag op Start op eigen paneel 6,1:1 of hoger | Geslaagd |
+| T27 | Foto's: laden en formaat | Alle zes bestanden opgevraagd; op 375 px gekeken welk formaat de browser kiest | Alles laadt; telefoon krijgt het kleine formaat | Alle bestanden laden (548 KB samen); op 375 px wordt de versie van 800 px gekozen | Geslaagd |
+| T28 | Foto's: beweging en breedte | Op 375 px de breedte gemeten en gekeken of de foto inzoomt en meescrolt; ook met "beweging beperken" | Geen horizontaal scrollen; beweging alleen zonder "beweging beperken" | Alle pagina's 375 px; foto zoomt van 1,08 naar 1 en schuift mee bij scrollen; met "beweging beperken" staat hij stil | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest
@@ -75,6 +80,12 @@ beeldjes. Daarna is getest in een gewone browser, beeldje voor beeldje. Twee ver
 - **Lag smoothing uit:** de animaties zijn nu altijd op tijd klaar, ook als een computer even hapert.
 - **Alleen opacity:** eerst werd ook `visibility: hidden` gebruikt. Dan is tekst die nog niet in beeld was niet te
   vinden met Ctrl+F en niet te lezen voor schermlezers. Nu wordt alleen de doorzichtigheid veranderd.
+
+## Opmerking bij T28 (testmethode)
+
+Een schermafbeelding met "beweging beperken" liet de kop eerst half doorzichtig zien. Een controle van de pagina
+liet zien dat het script de animatie wel overslaat. Het testprogramma gebruikte nog een oud browservenster zonder
+die instelling; met een nieuw venster was de kop meteen volledig zichtbaar. Geen fout in de site.
 
 ## Opmerking bij T4
 

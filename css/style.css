@@ -52,6 +52,7 @@
   --accent-soft: #e6efed;
   --on-accent: #f7f5f0;
   --on-accent-muted: #c5d6d3;
+  --scrim: rgba(18, 58, 55, 0.9); /* accent-strong, bijna dekkend: paneel over een foto */
 
   /* Alleen waar nodig */
   --warning: #7a5200;
@@ -587,4 +588,36 @@ h2 + p { margin-top: var(--s-16); }
 /* Bij afdrukken altijd alles tonen, ook wat nog niet in beeld was gescrold */
 @media print {
   * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+}
+
+/* ---------- Eigen foto's in de kopband ---------- */
+/* Desktop: foto rechts, loopt naar links over in petrol, zodat de tekst op een effen vlak staat.
+   Telefoon en tablet: foto heel zwak achter de hele band. Zo halen alle teksten WCAG AA. */
+.page-hero.has-photo { position: relative; overflow: hidden; isolation: isolate; }
+.hero-media {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  z-index: -1;
+  background: var(--accent-strong);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 40%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 40%);
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--photo-pos, center);
+  mix-blend-mode: luminosity;
+  opacity: 0.4;
+  will-change: transform;
+}
+.has-photo .lead { max-width: 34rem; }
+.has-photo .question { background: var(--scrim); padding: var(--s-24); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+.hero-credit { margin: var(--s-32) 0 0; font-size: var(--fs-14); color: var(--on-accent-muted); }
+@media (max-width: 900px) {
+  .hero-media { width: 100%; -webkit-mask-image: none; mask-image: none; }
+  .hero-media img { opacity: 0.15; }
 }

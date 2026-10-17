@@ -28,6 +28,17 @@
   var kop = gsap.utils.toArray(".page-hero .eyebrow, .page-hero h1, .page-hero .lead, .page-hero .question");
   gsap.from(kop, { y: 16, opacity: 0, stagger: 0.08 });
 
+  /* 1b. Foto in de kop: langzaam inzoomen bij het laden, en iets trager meescrollen dan de pagina */
+  gsap.utils.toArray(".hero-media").forEach(function (media) {
+    var img = media.querySelector("img");
+    if (img) gsap.fromTo(img, { scale: 1.08 }, { scale: 1, duration: 6, ease: "power1.out" });
+    gsap.to(media, {
+      yPercent: 12,
+      ease: "none",
+      scrollTrigger: { trigger: media.parentElement, start: "top top", end: "bottom top", scrub: true }
+    });
+  });
+
   /* 2. Kerncijfers tellen op */
   function formatteer(waarde, decimalen) {
     return waarde.toLocaleString("nl-NL", {
