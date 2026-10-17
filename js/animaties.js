@@ -39,6 +39,32 @@
     });
   });
 
+  /* 1c. Routepatroon (Achtergrond): haltes verschijnen, routes tekenen zichzelf, daarna stroomt er "geld" over twee routes.
+     Zonder GSAP of met "beweging beperken" staat het patroon gewoon helemaal getekend. */
+  var patroon = document.querySelector(".route-pattern");
+  if (patroon) {
+    var routes = gsap.utils.toArray(".route-pattern .route");
+    var stromen = gsap.utils.toArray(".route-pattern .route-flow");
+    var haltes = gsap.utils.toArray(".route-pattern .stop");
+
+    /* Elke lijn krijgt een streepje zo lang als de lijn zelf, dat er eerst helemaal naast ligt */
+    routes.forEach(function (pad) {
+      var lengte = pad.getTotalLength();
+      gsap.set(pad, { strokeDasharray: lengte, strokeDashoffset: lengte });
+    });
+    gsap.set(stromen, { opacity: 0 });
+
+    var tl = gsap.timeline({ delay: 0.2 });
+    tl.from(haltes, { scale: 0, transformOrigin: "50% 50%", duration: 0.4, stagger: 0.05, ease: "back.out(2)" })
+      .to(routes, { strokeDashoffset: 0, duration: 1.4, stagger: 0.12, ease: "power1.inOut" }, "-=0.2")
+      .to(stromen, { opacity: 0.9, duration: 0.6 });
+    /* Stroom loopt alleen zolang de kop in beeld is (spaart batterij) */
+    gsap.to(stromen, {
+      strokeDashoffset: -28, duration: 1.4, ease: "none", repeat: -1,
+      scrollTrigger: { trigger: patroon, start: "top bottom", end: "bottom top", toggleActions: "play pause resume pause" }
+    });
+  }
+
   /* 2. Kerncijfers tellen op */
   function formatteer(waarde, decimalen) {
     return waarde.toLocaleString("nl-NL", {

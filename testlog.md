@@ -6,6 +6,7 @@ T10 tot en met T13 zijn uitgevoerd na de verbeterronde op 17 oktober 2026 (Achte
 opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgeving op 17 oktober 2026.
 T20 tot en met T24 zijn uitgevoerd na het toevoegen van de animaties (GSAP) op 17 oktober 2026.
 T25 tot en met T28 zijn uitgevoerd na het toevoegen van de eigen foto's op 17 oktober 2026.
+T29 tot en met T31 zijn uitgevoerd na het toevoegen van het routepatroon op Achtergrond op 17 oktober 2026.
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -39,6 +40,9 @@ T25 tot en met T28 zijn uitgevoerd na het toevoegen van de eigen foto's op 17 ok
 | T26 | Foto's: contrast | Slechtste geval berekend: tekst boven een witte pixel van de foto, op telefoon en desktop | Minimaal 4,5:1 (AA) | Laagste waarde 5,2:1 (lichte tekst op telefoon); vraag op Start op eigen paneel 6,1:1 of hoger | Geslaagd |
 | T27 | Foto's: laden en formaat | Alle zes bestanden opgevraagd; op 375 px gekeken welk formaat de browser kiest | Alles laadt; telefoon krijgt het kleine formaat | Alle bestanden laden (548 KB samen); op 375 px wordt de versie van 800 px gekozen | Geslaagd |
 | T28 | Foto's: beweging en breedte | Op 375 px de breedte gemeten en gekeken of de foto inzoomt en meescrolt; ook met "beweging beperken" | Geen horizontaal scrollen; beweging alleen zonder "beweging beperken" | Alle pagina's 375 px; foto zoomt van 1,08 naar 1 en schuift mee bij scrollen; met "beweging beperken" staat hij stil | Geslaagd |
+| T29 | Routepatroon: animatie | `achtergrond.html` geladen en de animatie gevolgd; daarna naar beneden en terug gescrold | Haltes verschijnen, alle routes tekenen zich, stroom loopt; stroom pauzeert buiten beeld | 10/10 haltes en 10/10 routes getekend na 4,4 s; stroom beweegt, staat stil buiten beeld en loopt verder terug in beeld; geen fouten | Geslaagd |
+| T30 | Routepatroon: contrast | Slechtste geval berekend: tekst boven een witte halte, op telefoon | Minimaal 4,5:1 (AA) | **Eerst 4,61:1**: net genoeg, weinig marge. Patroon op telefoon zwakker gemaakt (20% naar 14%): nu 5,51:1 | Geslaagd na aanpassing |
+| T31 | Routepatroon: beweging beperken en breedte | Pagina met "beweging beperken" bekeken; breedte op 375 px gemeten | Patroon direct helemaal getekend, niets beweegt; geen horizontaal scrollen | Patroon volledig zichtbaar en stil; alle pagina's 375 px | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest

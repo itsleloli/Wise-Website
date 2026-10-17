@@ -84,13 +84,18 @@ Alle kleuren, maten en afstanden staan als variabelen (design tokens) bovenaan `
 De kopbanden van Start, De cijfers en Het advies hebben een eigen foto (vertrekbord, yen, vluchtroute). Ze zijn
 bijgesneden, omgezet naar WebP in twee formaten (de browser kiest zelf het kleinste dat past) en ontdaan van alle
 metadata: de originele iPhone-foto's bevatten GPS-locatie en het toesteltype. De foto's krijgen een petrolkleur
-via CSS, zodat de witte tekst altijd leesbaar blijft. Achtergrond heeft bewust geen foto.
+via CSS, zodat de witte tekst altijd leesbaar blijft.
+
+Achtergrond heeft geen foto maar een eigen getekend routepatroon: haltes en gebogen routes, zoals routes op een
+kaart. Het staat als SVG direct in `achtergrond.html`, zodat GSAP de lijnen kan laten tekenen. Er zit geen echte
+kaart of locatie in.
 
 ## Animaties
 
 De site gebruikt GSAP (met ScrollTrigger) voor drie rustige effecten: de kop van elke pagina komt in beeld, de
 grote kerncijfers tellen op vanaf 0, en blokken schuiven iets omhoog als je ernaartoe scrolt. De foto in de kop
-zoomt langzaam uit en scrolt iets trager mee dan de pagina.
+zoomt langzaam uit en scrolt iets trager mee dan de pagina. Op Achtergrond tekenen de routes zichzelf, waarna er
+over twee routes een stippellijn "geld" stroomt; die stroom pauzeert zodra de kop uit beeld is.
 
 - GSAP staat lokaal in `js/vendor/`, dus ook de animaties werken zonder internet.
 - Wie "beweging beperken" aan heeft in het besturingssysteem, ziet geen animaties.
