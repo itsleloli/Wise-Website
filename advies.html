@@ -18,6 +18,13 @@
   <meta property="og:image:alt" content="Wise in cijfers: Money without borders, maar hoe lang blijft Wise de goedkoopste en snelste?">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Alleen als animaties mogen: verberg de kop tot GSAP hem in beeld brengt (vangnet na 2 seconden) */
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("anim");
+      setTimeout(function () { document.documentElement.classList.remove("anim"); }, 2000);
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#inhoud">Naar de inhoud</a>
@@ -75,12 +82,12 @@
         </div>
         <ul class="stats">
           <li>
-            <span class="stat-value"><span class="unit">USD</span> 513,6 <span class="unit">mln</span></span>
+            <span class="stat-value"><span class="unit">USD</span> <span class="count" data-value="513.6" data-decimals="1">513,6</span> <span class="unit">mln</span></span>
             <span class="stat-label">transactiekosten in boekjaar 2026, ongeveer een vijfde van de omzet</span>
             <span class="stat-src">Bron: Wise Group plc (2026a)</span>
           </li>
           <li>
-            <span class="stat-value">&asymp; <span class="unit">USD</span> 5 <span class="unit">mln</span></span>
+            <span class="stat-value">&asymp; <span class="unit">USD</span> <span class="count" data-value="5" data-decimals="0">5</span> <span class="unit">mln</span></span>
             <span class="stat-label">per jaar bespaard voor elke procent lagere transactiekosten</span>
             <span class="stat-src">Eigen berekening: 1% van USD 513,6 mln</span>
           </li>
@@ -116,17 +123,17 @@
         </div>
         <ul class="stats">
           <li>
-            <span class="stat-value">&asymp; 60%</span>
+            <span class="stat-value">&asymp; <span class="count" data-value="60" data-decimals="0">60</span>%</span>
             <span class="stat-label">van de klanten is per kwartaal actief (11,3 van 18,9 miljoen)</span>
             <span class="stat-src">Bron: Wise Group plc (2026a; 2026b)</span>
           </li>
           <li>
-            <span class="stat-value">&asymp; <span class="unit">USD</span> 132</span>
+            <span class="stat-value">&asymp; <span class="unit">USD</span> <span class="count" data-value="132" data-decimals="0">132</span></span>
             <span class="stat-label">omzet per actieve klant per jaar</span>
             <span class="stat-src">Eigen berekening: USD 2.502,8 mln / 18,9 mln</span>
           </li>
           <li>
-            <span class="stat-value">&asymp; <span class="unit">USD</span> 25 <span class="unit">mln</span></span>
+            <span class="stat-value">&asymp; <span class="unit">USD</span> <span class="count" data-value="25" data-decimals="0">25</span> <span class="unit">mln</span></span>
             <span class="stat-label">extra omzet per jaar voor elke procent extra behouden klanten (189.000 klanten)</span>
             <span class="stat-src">Eigen berekening</span>
           </li>
@@ -209,5 +216,8 @@
       <p>Dit is geen website van Wise. Alle cijfers komen uit openbare bronnen, zie <a href="achtergrond.html#bronnen">Achtergrond</a>.</p>
     </div>
   </footer>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/animaties.js"></script>
 </body>
 </html>

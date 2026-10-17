@@ -18,6 +18,13 @@
   <meta property="og:image:alt" content="Wise in cijfers: Money without borders, maar hoe lang blijft Wise de goedkoopste en snelste?">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Alleen als animaties mogen: verberg de kop tot GSAP hem in beeld brengt (vangnet na 2 seconden) */
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("anim");
+      setTimeout(function () { document.documentElement.classList.remove("anim"); }, 2000);
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#inhoud">Naar de inhoud</a>
@@ -166,5 +173,8 @@
       <p>Dit is geen website van Wise. Alle cijfers komen uit openbare bronnen, zie <a href="achtergrond.html#bronnen">Achtergrond</a>.</p>
     </div>
   </footer>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/animaties.js"></script>
 </body>
 </html>

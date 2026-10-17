@@ -4,6 +4,7 @@ Website *Wise in cijfers*. De tests T1 tot en met T5 zijn uitgevoerd tijdens het
 (macOS, Google Chrome). De tests T6 tot en met T9 moeten nog worden uitgevoerd en ingevuld.
 T10 tot en met T13 zijn uitgevoerd na de verbeterronde op 17 oktober 2026 (Achtergrond-pagina, map `data`,
 opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgeving op 17 oktober 2026.
+T20 tot en met T24 zijn uitgevoerd na het toevoegen van de animaties (GSAP) op 17 oktober 2026.
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -28,6 +29,11 @@ opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgev
 | T17 | Contrast | Contrast van elke combinatie van tekst- en achtergrondkleur berekend volgens WCAG | Minimaal 4,5:1 (AA) | Laagste waarde 6,0:1 (grijze tekst op bijschrift), hoogste 15,8:1 | Geslaagd |
 | T18 | Toetsenbord | Met Tab door de pagina gegaan | Zichtbare focusrand op elke link en knop | Petrolkleurige rand zichtbaar, ook op de donkere band en in de voet | Geslaagd |
 | T19 | Links en kopie na nieuwe vormgeving | Alle links en bestanden opnieuw gecontroleerd, ook in een kopie in `andere map` | Geen kapotte links | 77 lokale links en bestanden, 0 fout, in beide mappen | Geslaagd |
+| T20 | Animaties: werking | Elke pagina geladen en stap voor stap naar beneden gescrold | Kop komt in beeld, cijfers tellen op, blokken schuiven in beeld; aan het eind is alles zichtbaar | Alle vier de pagina's: 0 onzichtbare elementen na scrollen; geen fouten in de console | Geslaagd |
+| T21 | Animaties: eindwaarden | Na het optellen de tekst van elk kerncijfer vergeleken met de oorspronkelijke waarde | Precies dezelfde cijfers als zonder animatie | Start: 18,9 · 2,5 · 0,50 · 77; Advies: 513,6 · 5 · 60 · 132 · 25 | Geslaagd |
+| T22 | Beweging beperken | Pagina geopend met de instelling "beweging beperken" | Geen animatie, alles meteen zichtbaar | Kop, cijfers en blokken direct zichtbaar met de eindwaarden | Geslaagd |
+| T23 | Zonder JavaScript | Zelfde pagina geladen zonder scripts | Alles meteen zichtbaar | 0 verborgen elementen | Geslaagd |
+| T24 | Offline en telefoon met animaties | Links en bestanden gecontroleerd (ook `js/`), en de breedte op 375 px gemeten | Geen kapotte links, geen scripts van internet, geen horizontaal scrollen | 89 lokale links en bestanden, 0 fout; alle scripts lokaal; alle pagina's 375 px | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest
@@ -59,6 +65,16 @@ opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgev
 In het testvenster leken de grafieken op `cijfers.html` eerst niet te laden. Ze hadden `loading="lazy"` en het
 venster stond op de achtergrond, waardoor de browser ze nooit "in beeld" zag. In een zichtbaar venster laden ze wel.
 Voor de zekerheid laadt grafiek 1, die direct onder de kop staat, nu meteen; alleen grafiek 2 laadt pas als je ernaartoe scrolt.
+
+## Opmerking bij T20 (testmethode en twee verbeteringen)
+
+De eerste test met een testprogramma dat de tijd versnelt, liet de blokken na afloop nog doorzichtig zien. Dat lag
+aan de testmethode: GSAP vangt grote sprongen in tijd op ("lag smoothing") en het testprogramma tekent bijna geen
+beeldjes. Daarna is getest in een gewone browser, beeldje voor beeldje. Twee verbeteringen zijn wel doorgevoerd:
+
+- **Lag smoothing uit:** de animaties zijn nu altijd op tijd klaar, ook als een computer even hapert.
+- **Alleen opacity:** eerst werd ook `visibility: hidden` gebruikt. Dan is tekst die nog niet in beeld was niet te
+  vinden met Ctrl+F en niet te lezen voor schermlezers. Nu wordt alleen de doorzichtigheid veranderd.
 
 ## Opmerking bij T4
 

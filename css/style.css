@@ -578,3 +578,13 @@ dl.terms dd { max-width: var(--measure); }
 h2 + p { margin-top: var(--s-16); }
 .content-section h3 { margin: var(--s-32) 0 var(--s-8); }
 .content-section h2 + p + h3 { margin-top: var(--s-24); }
+
+/* ---------- Animaties (GSAP, zie js/animaties.js) ---------- */
+/* Verberg de kop alleen tot het script draait; zonder JavaScript of met "beweging beperken" is alles meteen zichtbaar */
+.anim .page-hero .eyebrow, .anim .page-hero h1, .anim .page-hero .lead, .anim .page-hero .question { opacity: 0; }
+.count { font-variant-numeric: tabular-nums; }
+
+/* Bij afdrukken altijd alles tonen, ook wat nog niet in beeld was gescrold */
+@media print {
+  * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+}

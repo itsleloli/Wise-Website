@@ -47,6 +47,9 @@ wise-website/
 ├── css/
 │   └── style.css               Opmaak van alle pagina's, met design tokens bovenaan
 ├── fonts/                      Lettertypes Fraunces en IBM Plex Sans (lokaal, met OFL-licentie)
+├── js/
+│   ├── animaties.js            Eigen animaties: kop, optellende cijfers, blokken die in beeld schuiven
+│   └── vendor/                 GSAP 3.12.5 en ScrollTrigger (lokaal, GreenSock Standard License)
 ├── grafieken/
 │   ├── omzet-per-inkomstenstroom.svg   Grafiek 1
 │   └── kosten-overboeking.svg          Grafiek 2
@@ -74,6 +77,18 @@ Alle kleuren, maten en afstanden staan als variabelen (design tokens) bovenaan `
   geen schaduwen.
 - **Toegankelijk:** alle tekstkleuren halen WCAG AA, elke link en knop heeft een zichtbare focusrand, er is een
   link "Naar de inhoud" voor toetsenbordgebruikers, en animaties staan uit bij "beweging beperken".
+
+## Animaties
+
+De site gebruikt GSAP (met ScrollTrigger) voor drie rustige effecten: de kop van elke pagina komt in beeld, de
+grote kerncijfers tellen op vanaf 0, en blokken schuiven iets omhoog als je ernaartoe scrolt.
+
+- GSAP staat lokaal in `js/vendor/`, dus ook de animaties werken zonder internet.
+- Wie "beweging beperken" aan heeft in het besturingssysteem, ziet geen animaties.
+- Zonder JavaScript is alles meteen zichtbaar; de animaties veranderen niets aan de inhoud.
+- Er wordt alleen met doorzichtigheid (opacity) gewerkt, niet met `visibility`, zodat tekst altijd vindbaar is
+  met Ctrl+F en leesbaar blijft voor schermlezers.
+- Tailwind, DaisyUI en AutoAnimate zijn bewust niet gebruikt: zie de AI-log (logmoment 4).
 
 ## Opmerkingen
 

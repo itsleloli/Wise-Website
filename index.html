@@ -18,6 +18,13 @@
   <meta property="og:image:alt" content="Wise in cijfers: Money without borders, maar hoe lang blijft Wise de goedkoopste en snelste?">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Alleen als animaties mogen: verberg de kop tot GSAP hem in beeld brengt (vangnet na 2 seconden) */
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("anim");
+      setTimeout(function () { document.documentElement.classList.remove("anim"); }, 2000);
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#inhoud">Naar de inhoud</a>
@@ -59,22 +66,22 @@
         </div>
         <ul class="stats">
           <li>
-            <span class="stat-value">18,9 <span class="unit">mln</span></span>
+            <span class="stat-value"><span class="count" data-value="18.9" data-decimals="1">18,9</span> <span class="unit">mln</span></span>
             <span class="stat-label"><a href="achtergrond.html#actieve-klant">actieve klanten</a> in <a href="achtergrond.html#boekjaar">boekjaar</a> 2026 (april 2025 tot en met maart 2026), 21% meer dan een jaar eerder</span>
             <span class="stat-src">Bron: Wise Group plc (2026a)</span>
           </li>
           <li>
-            <span class="stat-value"><span class="unit">USD</span> 2,5 <span class="unit">mld</span></span>
+            <span class="stat-value"><span class="unit">USD</span> <span class="count" data-value="2.5" data-decimals="1">2,5</span> <span class="unit">mld</span></span>
             <span class="stat-label">omzet in boekjaar 2026, waarvan de helft uit internationale overboekingen</span>
             <span class="stat-src">Bron: Wise Group plc (2026a)</span>
           </li>
           <li>
-            <span class="stat-value">0,50%</span>
+            <span class="stat-value"><span class="count" data-value="0.50" data-decimals="2">0,50</span>%</span>
             <span class="stat-label">gemiddelde vergoeding per overboeking in Q1 boekjaar 2027 (was 0,58%)</span>
             <span class="stat-src">Bron: Wise Group plc (2026b)</span>
           </li>
           <li>
-            <span class="stat-value">77%</span>
+            <span class="stat-value"><span class="count" data-value="77" data-decimals="0">77</span>%</span>
             <span class="stat-label">van de overboekingen komt binnen 20 seconden aan (Q1 boekjaar 2027)</span>
             <span class="stat-src">Bron: Wise Group plc (2026b)</span>
           </li>
@@ -126,5 +133,8 @@
       <p>Dit is geen website van Wise. Alle cijfers komen uit openbare bronnen, zie <a href="achtergrond.html#bronnen">Achtergrond</a>.</p>
     </div>
   </footer>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/animaties.js"></script>
 </body>
 </html>
