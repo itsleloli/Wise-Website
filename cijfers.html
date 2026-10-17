@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wise in cijfers | De cijfers</title>
+  <meta name="description" content="Twee grafieken over het verdienmodel van Wise en het prijsverschil met banken.">
+  <link rel="icon" href="afbeeldingen/icoon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="afbeeldingen/icoon.svg" alt="" width="32" height="32">Wise in cijfers</a>
+      <nav aria-label="Hoofdmenu">
+        <ul class="nav">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="cijfers.html" aria-current="page">De cijfers</a></li>
+          <li><a href="advies.html">Het advies</a></li>
+          <li><a href="bronnen.html">Bronnen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <p class="eyebrow">De cijfers</p>
+        <h1>Waar verdient Wise aan, en hoe groot is de voorsprong nog?</h1>
+        <p class="lead">Twee grafieken uit openbare bronnen. De eerste laat zien dat de omzet van Wise afhangt van klanten die blijven en geld laten staan. De tweede laat zien dat Wise veel goedkoper is dan een bank, maar dat overheden en concurrenten dat verschil kleiner willen maken.</p>
+      </section>
+
+      <!-- Grafiek 1 -->
+      <h2 id="grafiek-1">Grafiek 1: de helft van de omzet komt uit één product</h2>
+      <figure class="chart">
+        <img src="grafieken/omzet-per-inkomstenstroom.svg" width="760" height="380"
+             alt="Staafdiagram van de omzet van Wise in boekjaar 2026 per inkomstenstroom, in miljoenen US-dollar. Internationale overboekingen 1.257,0 (50%), rente na uitkering aan klanten 609,2 (24%), kaart 391,6 (16%), overig 245,0 (10%). Totaal 2.502,8 miljoen.">
+        <figcaption>
+          <dl>
+            <dt>Titel</dt><dd>Omzet van Wise per inkomstenstroom</dd>
+            <dt>Eenheid</dt><dd>miljoen US-dollar (USD), met aandeel in de totale omzet</dd>
+            <dt>Periode</dt><dd>boekjaar 2026 (1 april 2025 tot en met 31 maart 2026)</dd>
+            <dt>Bron</dt><dd>Wise Group plc (2026a), <cite>Annual report and accounts FY2026</cite>, <a href="https://owners.wise.com/static-files/8a520d4d-373b-4058-b288-1757bf067c04">owners.wise.com/static-files/8a520d4d-373b-4058-b288-1757bf067c04</a>, geraadpleegd op 15 september 2026</dd>
+          </dl>
+        </figcaption>
+      </figure>
+
+      <details>
+        <summary>Toon de cijfers als tabel</summary>
+        <div class="table-scroll">
+          <table>
+            <caption class="sr-only">Omzet Wise per inkomstenstroom, boekjaar 2026</caption>
+            <thead><tr><th>Inkomstenstroom</th><th class="num">USD miljoen</th><th class="num">Aandeel</th></tr></thead>
+            <tbody>
+              <tr><td>Internationale overboekingen</td><td class="num">1.257,0</td><td class="num">50%</td></tr>
+              <tr><td>Rente na uitkering aan klanten</td><td class="num">609,2</td><td class="num">24%</td></tr>
+              <tr><td>Kaart</td><td class="num">391,6</td><td class="num">16%</td></tr>
+              <tr><td>Overig</td><td class="num">245,0</td><td class="num">10%</td></tr>
+              <tr><th>Totaal</th><th class="num">2.502,8</th><th class="num">100%</th></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <div class="explain">
+        <h3>Wat zie je?</h3>
+        <p>Van elke dollar die Wise verdient, komt ongeveer de helft uit internationale overboekingen. Bijna een kwart is rente over het geld dat klanten op hun rekening laten staan. De kaart en overige diensten zijn samen ook ongeveer een kwart.</p>
+        <h3>Wat betekent het?</h3>
+        <p>De twee grootste blokken hangen allebei af van klanten die bij Wise blijven. Een klant die vertrekt, neemt zijn overboekingen mee én zijn tegoed, en daarmee de rente. Omdat overstappen bijna niets kost, is klantbehoud voor Wise dus belangrijker dan het lijkt. Daar komt bij dat de rente buiten de macht van Wise ligt: in boekjaar 2026 groeiden de tegoeden met 40%, maar de rente-inkomsten met maar 6%.</p>
+      </div>
+      <div class="limits">
+        <h3>Beperkingen</h3>
+        <ul>
+          <li>De percentages zijn zelf berekend als aandeel van de totale omzet van USD 2.502,8 miljoen. Door afronding tellen ze op tot 100%.</li>
+          <li>De rente is het bedrag ná uitkering aan klanten. De bruto rente-inkomsten zijn hoger.</li>
+          <li>Het gaat om één boekjaar. Hoe de verdeling over meerdere jaren verandert, laat deze grafiek niet zien.</li>
+          <li>Het jaarverslag komt van Wise zelf. De cijfers zijn wel gecontroleerd door een accountant.</li>
+        </ul>
+      </div>
+
+      <!-- Grafiek 2 -->
+      <h2 id="grafiek-2">Grafiek 2: Wise is veel goedkoper dan een bank, maar het doel komt dichterbij</h2>
+      <figure class="chart">
+        <img src="grafieken/kosten-overboeking.svg" width="760" height="420"
+             alt="Staafdiagram van de kosten van geld overmaken naar het buitenland, als percentage van het bedrag. Banken 14,99%, wereldgemiddelde 6,36%, volledig digitale aanbieders 3,54% (alle drie voor een overboeking van 200 dollar, derde kwartaal 2025). Gemiddelde vergoeding van Wise 0,50% (eerste kwartaal boekjaar 2027). Een stippellijn op 3% geeft het doel van de VN en de G20 voor 2030 aan.">
+        <figcaption>
+          <dl>
+            <dt>Titel</dt><dd>Wat kost het om geld naar het buitenland te sturen?</dd>
+            <dt>Eenheid</dt><dd>kosten als percentage van het verstuurde bedrag</dd>
+            <dt>Periode</dt><dd>derde kwartaal 2025 (Wereldbank); eerste kwartaal boekjaar 2027, april tot en met juni 2026 (Wise)</dd>
+            <dt>Bronnen</dt><dd>World Bank (2025), <cite>Remittance Prices Worldwide Quarterly: Issue 54</cite>, <a href="https://remittanceprices.worldbank.org/sites/default/files/2026-04/RPW_main_report_and_annex_Q325.pdf">remittanceprices.worldbank.org</a>, geraadpleegd op 15 september 2026; Wise Group plc (2026b), <cite>Wise Q1 FY27 trading update</cite>, <a href="https://owners.wise.com/news-releases/news-release-details/wise-q1-fy27-trading-update">owners.wise.com/news-releases</a>, geraadpleegd op 15 september 2026</dd>
+          </dl>
+        </figcaption>
+      </figure>
+
+      <details>
+        <summary>Toon de cijfers als tabel</summary>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Aanbieder</th><th class="num">Kosten</th><th>Wat is gemeten</th></tr></thead>
+            <tbody>
+              <tr><td>Banken</td><td class="num">14,99%</td><td>gemiddelde kosten voor USD 200, Q3 2025</td></tr>
+              <tr><td>Wereldgemiddelde</td><td class="num">6,36%</td><td>gemiddelde kosten voor USD 200, Q3 2025</td></tr>
+              <tr><td>Volledig digitale aanbieders</td><td class="num">3,54%</td><td>gemiddelde kosten voor USD 200, Q3 2025</td></tr>
+              <tr><td>Wise</td><td class="num">0,50%</td><td>gemiddelde vergoeding over alle overboekingen, Q1 boekjaar 2027</td></tr>
+              <tr><td>Doel VN en G20 voor 2030</td><td class="num">3,00%</td><td>streefwaarde, geen meting</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <div class="explain">
+        <h3>Wat zie je?</h3>
+        <p>Een bank rekent gemiddeld bijna 15% voor een overboeking van 200 dollar. Volledig digitale aanbieders zitten op 3,54%, en de gemiddelde vergoeding van Wise is 0,50%. De stippellijn is het doel van de VN en de G20: gemiddeld 3% in 2030.</p>
+        <h3>Wat betekent het?</h3>
+        <p>Tegenover een bank heeft Wise nog een groot prijsvoordeel. Maar overheden willen dat iedereen goedkoper wordt, en de digitale aanbieders zitten al dicht bij het doel. Hoe dichter de rest bij Wise komt, hoe minder de prijs alleen een reden is om voor Wise te kiezen. Wise verlaagt zijn vergoeding zelf ook (van 0,58% naar 0,50%), dus de marge om nog goedkoper te worden wordt kleiner. Dat is de reden dat het advies niet alleen op prijs leunt.</p>
+      </div>
+      <div class="limits">
+        <h3>Beperkingen</h3>
+        <ul>
+          <li>De staven meten niet precies hetzelfde. De Wereldbank meet de kosten van één overboeking van USD 200, inclusief de opslag op de wisselkoers. Het cijfer van Wise is het gemiddelde over alle overboekingen, ook grote bedragen, waar het percentage lager uitvalt. Voor 200 dollar ligt het percentage bij Wise dus waarschijnlijk hoger dan 0,50%.</li>
+          <li>De metingen komen uit verschillende periodes: de Wereldbank uit Q3 2025, Wise uit april tot en met juni 2026.</li>
+          <li>De Wereldbank meet vooral routes naar lage- en middeninkomenslanden. Voor routes binnen Europa liggen de kosten anders.</li>
+          <li>De 3% is een doel en geen gemeten waarde.</li>
+        </ul>
+      </div>
+
+      <p><a class="button" href="advies.html">Wat kan Wise hiermee? Lees het advies</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Studentproject van L. Bonora, Business IT &amp; Management, Hogeschool Rotterdam (BIMGST05R1, 2026-2027).</p>
+      <p>Dit is geen website van Wise. Alle cijfers komen uit openbare bronnen, zie <a href="bronnen.html">Bronnen</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
