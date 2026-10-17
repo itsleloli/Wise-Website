@@ -86,16 +86,19 @@ bijgesneden, omgezet naar WebP in twee formaten (de browser kiest zelf het klein
 metadata: de originele iPhone-foto's bevatten GPS-locatie en het toesteltype. De foto's krijgen een petrolkleur
 via CSS, zodat de witte tekst altijd leesbaar blijft.
 
-Achtergrond heeft geen foto maar een eigen getekend routepatroon: haltes en gebogen routes, zoals routes op een
-kaart. Het staat als SVG direct in `achtergrond.html`, zodat GSAP de lijnen kan laten tekenen. Er zit geen echte
-kaart of locatie in.
+Achtergrond heeft geen foto maar een eigen getekende routekaart: echte steden op hun plek op een platte wereldkaart
+(alleen lengte- en breedtegraden, geen kustlijnen). Londen is het middelpunt, want daar zit Wise. Doorgetrokken lijnen
+zijn directe aansluitingen, met Zengin (Tokio) en PIX (São Paulo) uit het rapport. De gestreepte lijn naar "?" is de
+extra route via stablecoins naar een land zonder directe aansluiting (pijler 1); die plek is illustratief en staat
+niet voor een echt land. De kaart staat als SVG direct in `achtergrond.html`, zodat GSAP de lijnen kan laten tekenen.
 
 ## Animaties
 
 De site gebruikt GSAP (met ScrollTrigger) voor drie rustige effecten: de kop van elke pagina komt in beeld, de
 grote kerncijfers tellen op vanaf 0, en blokken schuiven iets omhoog als je ernaartoe scrolt. De foto in de kop
-zoomt langzaam uit en scrolt iets trager mee dan de pagina. Op Achtergrond tekenen de routes zichzelf, waarna er
-over twee routes een stippellijn "geld" stroomt; die stroom pauzeert zodra de kop uit beeld is.
+zoomt langzaam uit en scrolt iets trager mee dan de pagina. Op Achtergrond verschijnen de steden, tekenen de directe
+routes zichzelf, komt de extra route erbij en stroomt er "geld" (stipjes) over twee routes; die stroom pauzeert zodra
+de kop uit beeld is.
 
 - GSAP staat lokaal in `js/vendor/`, dus ook de animaties werken zonder internet.
 - Wie "beweging beperken" aan heeft in het besturingssysteem, ziet geen animaties.

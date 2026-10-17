@@ -46,43 +46,56 @@
   <main id="inhoud">
     <section class="band-accent page-hero has-photo has-pattern" aria-labelledby="titel">
       <div class="hero-media">
-        <!-- Eigen getekend routepatroon (inline, zodat GSAP de lijnen kan tekenen) -->
-        <svg class="route-pattern" viewBox="0 0 880 495" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <!-- Eigen getekende routekaart: echte steden op een platte wereldkaart (inline, zodat GSAP de lijnen kan tekenen) -->
+        <svg class="route-pattern route-map" viewBox="0 0 920 406" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
           <g class="grid">
-            <line x1="0" y1="60" x2="880" y2="60"/>
-            <line x1="0" y1="135" x2="880" y2="135"/>
-            <line x1="0" y1="210" x2="880" y2="210"/>
-            <line x1="0" y1="285" x2="880" y2="285"/>
-            <line x1="0" y1="360" x2="880" y2="360"/>
-            <line x1="0" y1="435" x2="880" y2="435"/>
+            <line x1="0" y1="397" x2="920" y2="397"/>
+            <line x1="0" y1="268" x2="920" y2="268"/>
+            <line x1="0" y1="138" x2="920" y2="138"/>
+            <line x1="0" y1="9" x2="920" y2="9"/>
+            <line x1="22" y1="0" x2="22" y2="406"/>
+            <line x1="151" y1="0" x2="151" y2="406"/>
+            <line x1="281" y1="0" x2="281" y2="406"/>
+            <line x1="410" y1="0" x2="410" y2="406"/>
+            <line x1="540" y1="0" x2="540" y2="406"/>
+            <line x1="669" y1="0" x2="669" y2="406"/>
+            <line x1="799" y1="0" x2="799" y2="406"/>
           </g>
           <g class="routes">
-            <path class="route" d="M110 150 Q282 84 465 175"/>
-            <path class="route" d="M290 85 Q462 16 640 100"/>
-            <path class="route" d="M465 175 Q624 121 800 215"/>
-            <path class="route" d="M235 310 Q425 222 610 300"/>
-            <path class="route" d="M430 370 Q591 315 770 410"/>
-            <path class="route" d="M120 430 Q288 332 430 370"/>
-            <path class="route" d="M110 150 Q137 202 235 310"/>
-            <path class="route" d="M640 100 Q581 207 610 300"/>
-            <path class="route" d="M290 85 Q297 197 430 370"/>
-            <path class="route" d="M610 300 Q724 216 800 215"/>
+            <path class="route" d="M302 42 Q290 40 280 45"/>
+            <path class="route" d="M280 45 Q594 -29 884 114"/>
+            <path class="route" d="M280 45 Q121 171 79 370"/>
+            <path class="route" d="M280 45 Q544 73 729 262"/>
+            <path class="route-extra" d="M280 45 Q353 136 376 251"/>
           </g>
           <g class="flows">
-            <path class="route-flow" d="M290 85 Q462 16 640 100"/>
-            <path class="route-flow" d="M235 310 Q425 222 610 300"/>
+            <path class="route-flow" d="M280 45 Q594 -29 884 114"/>
+            <path class="route-flow" d="M280 45 Q121 171 79 370"/>
           </g>
           <g class="stops">
-            <circle class="stop" cx="110" cy="150" r="5"/>
-            <circle class="stop" cx="290" cy="85" r="5"/>
-            <circle class="stop" cx="465" cy="175" r="5"/>
-            <circle class="stop" cx="640" cy="100" r="5"/>
-            <circle class="stop" cx="800" cy="215" r="5"/>
-            <circle class="stop" cx="235" cy="310" r="5"/>
-            <circle class="stop" cx="430" cy="370" r="5"/>
-            <circle class="stop" cx="610" cy="300" r="5"/>
-            <circle class="stop" cx="770" cy="410" r="5"/>
-            <circle class="stop" cx="120" cy="430" r="5"/>
+            <circle class="stop" cx="280" cy="45" r="6"/>
+            <circle class="stop" cx="302" cy="42" r="6"/>
+            <circle class="stop" cx="884" cy="114" r="6"/>
+            <circle class="stop" cx="79" cy="370" r="6"/>
+            <circle class="stop" cx="729" cy="262" r="6"/>
+            <circle class="stop stop-unknown" cx="376" cy="251" r="6"/>
+          </g>
+          <g class="labels">
+            <text class="label" x="268" y="31" text-anchor="end">Londen</text>
+            <text class="label label-sub" x="268" y="51" text-anchor="end">Wise</text>
+            <text class="label" x="314" y="68" text-anchor="start">Amsterdam</text>
+            <text class="label" x="870" y="120" text-anchor="end">Tokio</text>
+            <text class="label label-sub" x="870" y="140" text-anchor="end">Zengin</text>
+            <text class="label" x="93" y="376" text-anchor="start">São Paulo</text>
+            <text class="label label-sub" x="93" y="396" text-anchor="start">PIX</text>
+            <text class="label" x="743" y="268" text-anchor="start">Singapore</text>
+            <text class="label" x="390" y="257">?</text>
+          </g>
+          <g class="legend labels">
+            <line class="legend-direct" x1="590" y1="382" x2="620" y2="382"/>
+            <text class="label label-sub" x="628" y="388">directe aansluiting</text>
+            <line class="legend-extra" x1="790" y1="382" x2="820" y2="382"/>
+            <text class="label label-sub" x="828" y="388">extra route</text>
           </g>
         </svg>
       </div>

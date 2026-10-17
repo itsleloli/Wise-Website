@@ -631,3 +631,20 @@ h2 + p { margin-top: var(--s-16); }
 @media (max-width: 900px) {
   .has-pattern .hero-media { opacity: 0.14; }
 }
+
+/* Routekaart: echte steden, labels en legenda */
+.has-pattern .hero-media { -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%); mask-image: linear-gradient(to right, transparent 0%, #000 8%); }
+.route-map .grid line { opacity: 0.25; }
+/* Geld onderweg: ronde stipjes, zodat alleen de extra route gestreept is */
+.route-map .route-flow { stroke-width: 4; stroke-dasharray: 0.1 22; stroke-linecap: round; }
+.route-map .route-extra { fill: none; stroke: var(--on-accent); stroke-width: 2; stroke-dasharray: 8 8; stroke-linecap: round; opacity: 0.9; }
+.route-map .stop-unknown { fill: var(--accent-strong); stroke: var(--on-accent); stroke-width: 2; }
+.route-map .label { fill: var(--on-accent); font-family: var(--font-body); font-size: 20px; font-weight: 600; }
+.route-map .label-sub { fill: var(--on-accent-muted); font-size: 16px; font-weight: 400; }
+/* Halo in de achtergrondkleur, zodat lijnen achter de namen langs lopen (zoals op een echte kaart) */
+.route-map .label { paint-order: stroke; stroke: var(--accent-strong); stroke-width: 7px; stroke-linejoin: round; }
+.route-map .legend-direct { stroke: var(--on-accent-muted); stroke-width: 2; }
+.route-map .legend-extra { stroke: var(--on-accent); stroke-width: 2; stroke-dasharray: 6 5; }
+@media (max-width: 900px) {
+  .has-pattern .hero-media { -webkit-mask-image: none; mask-image: none; }
+}

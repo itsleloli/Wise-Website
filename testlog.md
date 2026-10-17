@@ -7,6 +7,7 @@ opmerking in grafiek 2). T14 tot en met T19 zijn uitgevoerd na de nieuwe vormgev
 T20 tot en met T24 zijn uitgevoerd na het toevoegen van de animaties (GSAP) op 17 oktober 2026.
 T25 tot en met T28 zijn uitgevoerd na het toevoegen van de eigen foto's op 17 oktober 2026.
 T29 tot en met T31 zijn uitgevoerd na het toevoegen van het routepatroon op Achtergrond op 17 oktober 2026.
+T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd op 17 oktober 2026.
 
 | Nr. | Test | Hoe getest | Verwacht | Resultaat | Status |
 |---|---|---|---|---|---|
@@ -43,6 +44,11 @@ T29 tot en met T31 zijn uitgevoerd na het toevoegen van het routepatroon op Acht
 | T29 | Routepatroon: animatie | `achtergrond.html` geladen en de animatie gevolgd; daarna naar beneden en terug gescrold | Haltes verschijnen, alle routes tekenen zich, stroom loopt; stroom pauzeert buiten beeld | 10/10 haltes en 10/10 routes getekend na 4,4 s; stroom beweegt, staat stil buiten beeld en loopt verder terug in beeld; geen fouten | Geslaagd |
 | T30 | Routepatroon: contrast | Slechtste geval berekend: tekst boven een witte halte, op telefoon | Minimaal 4,5:1 (AA) | **Eerst 4,61:1**: net genoeg, weinig marge. Patroon op telefoon zwakker gemaakt (20% naar 14%): nu 5,51:1 | Geslaagd na aanpassing |
 | T31 | Routepatroon: beweging beperken en breedte | Pagina met "beweging beperken" bekeken; breedte op 375 px gemeten | Patroon direct helemaal getekend, niets beweegt; geen horizontaal scrollen | Patroon volledig zichtbaar en stil; alle pagina's 375 px | Geslaagd |
+| T32 | Routekaart: begrijpelijkheid | Zelf naar het eerste patroon gekeken: wat stelt het voor? | De bezoeker ziet geld tussen landen | **Fout:** het abstracte patroon (punten en lijnen zonder namen) liet niet zien wat het moest voorstellen | Fout, zie hieronder |
+| T32b | Hertest T32 | Kop van Achtergrond bekeken na de nieuwe routekaart | Echte steden met namen, directe routes en een extra route, met uitleg | Londen, Amsterdam, Tokio (Zengin), São Paulo (PIX), Singapore en "?" met legenda; de betekenis is zonder uitleg te zien | Geslaagd |
+| T33 | Routekaart: namen leesbaar | Alle namen op de kaart bekeken op 1440 px | Geen lijn door een naam | **Fout:** "Amsterdam" werd doorkruist door de lijn naar Tokio, en na verplaatsen door de lijn naar Singapore | Fout, zie hieronder |
+| T33b | Hertest T33 | Zelfde weergave na herstel | Alle namen vrij leesbaar | Lijnen lopen achter de namen langs; alle namen leesbaar | Geslaagd |
+| T34 | Routekaart: animatie en breedte | Animatie gevolgd; breedte op 375 px gemeten; console bekeken | Steden, namen, routes, extra route en stroom verschijnen op volgorde; geen horizontaal scrollen; geen fouten | 6/6 steden, 4/4 routes getekend, extra route en stroom zichtbaar en in beweging na 4,7 s; alle pagina's 375 px; geen fouten | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fout, herstel en hertest
@@ -84,6 +90,16 @@ beeldjes. Daarna is getest in een gewone browser, beeldje voor beeldje. Twee ver
 - **Lag smoothing uit:** de animaties zijn nu altijd op tijd klaar, ook als een computer even hapert.
 - **Alleen opacity:** eerst werd ook `visibility: hidden` gebruikt. Dan is tekst die nog niet in beeld was niet te
   vinden met Ctrl+F en niet te lezen voor schermlezers. Nu wordt alleen de doorzichtigheid veranderd.
+
+- **Fout (T32):** het eerste routepatroon was abstract: punten en lijnen zonder namen. Het moest "geld tussen landen"
+  voorstellen, maar dat was niet te zien.
+- **Herstel:** een echte routekaart: steden op hun echte plek (lengte- en breedtegraad), met namen, Zengin en PIX uit
+  het rapport, een gestreepte extra route (pijler 1) en een legenda.
+- **Hertest (T32b):** de betekenis is nu zonder uitleg te zien.
+- **Fout (T33):** de naam "Amsterdam" werd doorkruist door een route.
+- **Herstel:** elke naam heeft een rand in de achtergrondkleur (een "halo", zoals op echte kaarten), zodat de lijnen
+  achter de namen langs lopen.
+- **Hertest (T33b):** alle namen zijn vrij leesbaar.
 
 ## Opmerking bij T28 (testmethode)
 

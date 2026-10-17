@@ -39,30 +39,35 @@
     });
   });
 
-  /* 1c. Routepatroon (Achtergrond): haltes verschijnen, routes tekenen zichzelf, daarna stroomt er "geld" over twee routes.
-     Zonder GSAP of met "beweging beperken" staat het patroon gewoon helemaal getekend. */
-  var patroon = document.querySelector(".route-pattern");
-  if (patroon) {
+  /* 1c. Routekaart (Achtergrond): steden verschijnen, directe routes tekenen zichzelf, dan de extra route,
+     en daarna stroomt er "geld" over twee directe routes.
+     Zonder GSAP of met "beweging beperken" staat de kaart gewoon helemaal getekend. */
+  var kaart = document.querySelector(".route-pattern");
+  if (kaart) {
     var routes = gsap.utils.toArray(".route-pattern .route");
+    var extra = gsap.utils.toArray(".route-pattern .route-extra");
     var stromen = gsap.utils.toArray(".route-pattern .route-flow");
     var haltes = gsap.utils.toArray(".route-pattern .stop");
+    var labels = gsap.utils.toArray(".route-pattern .labels");
 
     /* Elke lijn krijgt een streepje zo lang als de lijn zelf, dat er eerst helemaal naast ligt */
     routes.forEach(function (pad) {
       var lengte = pad.getTotalLength();
       gsap.set(pad, { strokeDasharray: lengte, strokeDashoffset: lengte });
     });
-    gsap.set(stromen, { opacity: 0 });
+    gsap.set(stromen.concat(extra), { opacity: 0 });
 
     var tl = gsap.timeline({ delay: 0.2 });
-    tl.from(haltes, { scale: 0, transformOrigin: "50% 50%", duration: 0.4, stagger: 0.05, ease: "back.out(2)" })
-      .to(routes, { strokeDashoffset: 0, duration: 1.4, stagger: 0.12, ease: "power1.inOut" }, "-=0.2")
-      .to(stromen, { opacity: 0.9, duration: 0.6 });
-    /* Stroom loopt alleen zolang de kop in beeld is (spaart batterij) */
-    gsap.to(stromen, {
-      strokeDashoffset: -28, duration: 1.4, ease: "none", repeat: -1,
-      scrollTrigger: { trigger: patroon, start: "top bottom", end: "bottom top", toggleActions: "play pause resume pause" }
-    });
+    tl.from(haltes, { scale: 0, transformOrigin: "50% 50%", duration: 0.4, stagger: 0.06, ease: "back.out(2)" })
+      .from(labels, { opacity: 0, duration: 0.5 }, "-=0.2")
+      .to(routes, { strokeDashoffset: 0, duration: 1.2, stagger: 0.15, ease: "power1.inOut" }, "-=0.3")
+      .to(extra, { opacity: 0.9, duration: 0.6 })
+      .to(stromen, { opacity: 1, duration: 0.6 }, "<");
+
+    /* Geld en extra route bewegen alleen zolang de kop in beeld is (spaart batterij) */
+    var inBeeld = { trigger: kaart, start: "top bottom", end: "bottom top", toggleActions: "play pause resume pause" };
+    gsap.to(stromen, { strokeDashoffset: -44, duration: 1.6, ease: "none", repeat: -1, scrollTrigger: inBeeld });
+    gsap.to(extra, { strokeDashoffset: -32, duration: 2.4, ease: "none", repeat: -1, scrollTrigger: Object.assign({}, inBeeld) });
   }
 
   /* 2. Kerncijfers tellen op */
