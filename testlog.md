@@ -55,7 +55,7 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T34 | Routekaart: animatie en breedte | Animatie gevolgd; breedte op 375 px gemeten; console bekeken | Steden, namen, routes, extra route en stroom verschijnen op volgorde; geen horizontaal scrollen; geen fouten | 6/6 steden, 4/4 routes getekend, extra route en stroom zichtbaar en in beweging na 4,7 s; alle pagina's 375 px; geen fouten | Geslaagd |
 | T36 | App-schets in de browser van de gebruiker | `advies.html` geopend in de eigen browser na de nieuwe app-schets | App-schets zichtbaar met de nieuwe opmaak | **Fout:** de telefoon was helemaal zwart en het label had geen rand: de browser gebruikte nog een oude, bewaarde versie van `style.css` bij de nieuwe HTML | Fout, zie hieronder |
 | T36b | Hertest T36 | Na herstel dezelfde pagina geladen, via de server en met een dubbelklik op het bestand | Nieuwe opmaak zonder handmatig verversen | Pagina laadt `style.css?v=20261021`; app-schets en label goed zichtbaar, ook als bestand (`file://`); 94 links, 0 fout | Geslaagd |
-| T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
+| T9 | Andere browser | Op 21-10-2026 `index.html` geopend in Safari 27.0.1 als bestand (`file://`), zonder server, en alle vier de pagina's doorgeklikt | Zelfde resultaat als in Chrome | Alles werkt: foto's, optellende cijfers, beide grafieken en de tabellen, de stappen en de app-schets bij het advies, de routekaart en de lettertypes | Geslaagd |
 
 ## Gevonden fouten T7 en T35
 
