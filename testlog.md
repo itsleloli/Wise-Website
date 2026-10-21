@@ -22,8 +22,8 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T7b | Hertest T7 | Hetzelfde familielid leest advies 1 opnieuw, na herstel | Kan in eigen woorden uitleggen hoe het geld via een stablecoin bij de ontvanger komt | Legt het zelf uit: een stablecoin is gekoppeld aan een munt ("1 Scooby-dollar is 1 dollar") en die kun je versturen zonder dat er banken nodig zijn. Het risico en de keuze tussen twee routes noemde ze niet; de kern begreep ze wel | Geslaagd |
 | T35 | Opmaak na nieuwe app-schets | `advies.html` bekeken na het vervangen van de app-schets | Label "Voorbeeld met verzonnen cijfers" is opgemaakt | **Fout:** het label had geen opmaak meer | Fout, zie hieronder |
 | T35b | Hertest T35 | Zelfde pagina opnieuw bekeken; stijlblad gecontroleerd op losse regels; breedte op 375 px gemeten | Label opgemaakt; geen losse regels; geen horizontaal scrollen | Label weer opgemaakt; stijlblad klopt; alle pagina's 375 px, stappen onder elkaar, app-schets 343 px breed | Geslaagd |
-| T8 | Medestudent legt grafieken uit | Een medestudent heeft in de les beide grafieken op `cijfers.html` uitgelegd, zonder hulp *(naam: zelf invullen)* | Uitleg klopt met de boodschap en de beperkingen | Beide grafieken waren duidelijk. **Twee punten onduidelijk:** grafiek 2: "Banken" zegt niet om welke banken het gaat (welk werelddeel?); grafiek 1: wat betekent "1.257,0", 1.257 miljoen? | Fout, zie hieronder |
-| T8b | Hertest T8 | Dezelfde medestudent kijkt opnieuw naar beide grafieken, na herstel | Weet dat het om wereldwijde gemiddelden en om miljoenen US-dollar gaat | *nog invullen* | Open |
+| T8 | Medestudent legt grafieken uit | Medestudent Mijndert IJzerdoorn heeft in de les beide grafieken op `cijfers.html` uitgelegd, zonder hulp | Uitleg klopt met de boodschap en de beperkingen | Beide grafieken waren duidelijk. **Twee punten onduidelijk:** grafiek 2: "Banken" zegt niet om welke banken het gaat (welk werelddeel?); grafiek 1: wat betekent "1.257,0", 1.257 miljoen? | Fout, zie hieronder |
+| T8b | Hertest T8 | Mijndert IJzerdoorn kijkt opnieuw naar beide grafieken, na herstel | Weet dat het om wereldwijde gemiddelden en om miljoenen US-dollar gaat | Akkoord: beide punten zijn nu duidelijk | Geslaagd |
 | T10 | Links na hernoemen | `bronnen.html` hernoemd naar `achtergrond.html`; alle links en ankers opnieuw gecontroleerd, ook naar `data/` en `#aannames` | Geen kapotte links | 60 lokale links en bestanden gecontroleerd, 0 fout; geen verwijzing meer naar `bronnen.html` | Geslaagd |
 | T11 | Grafiek 2: nieuwe opmerking | Opmerking over de Wise-staaf toegevoegd in `kosten-overboeking.svg` en de grafiek bekeken | Opmerking volledig zichtbaar | **Fout:** de opmerking was te lang en liep rechts uit de grafiek ("…metingen voor USD 2") | Fout, zie hieronder |
 | T11b | Hertest T11 | Na herstel dezelfde grafiek opnieuw bekeken | Opmerking volledig zichtbaar | Opmerking past op één regel binnen de grafiek | Geslaagd |
@@ -90,7 +90,7 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 - **Fout (T8), grafiek 1:** bij de getallen stond geen eenheid ("1.257,0"); die stond alleen in de ondertitel.
 - **Herstel:** elk getal heeft nu zijn eenheid ("USD 1.257,0 mln (50%)") en onder de as staat "miljoen US-dollar".
   Grafiek 2 kreeg onder de as "% van het verstuurde bedrag".
-- **Hertest (T8b):** nog doen: dezelfde medestudent opnieuw laten kijken.
+- **Hertest (T8b):** dezelfde medestudent keek opnieuw en vond beide punten nu duidelijk.
 - De grafieken hebben nu ook een versienummer (`?v=20261021c`), zodat de browser niet de oude versie laat zien.
 
 ## Uitwerking T6 (broncijfers)
