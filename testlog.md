@@ -19,10 +19,11 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T5b | Hertest T5 | Na herstel dezelfde test opnieuw | Volledige bronregel zichtbaar | Bron staat op drie regels en is volledig leesbaar | Geslaagd |
 | T6 | Broncijfers | Op 21-10-2026 elk cijfer op de site naast de bron gelegd: Wise FY26 Results (zelfde jaarcijfers als het jaarverslag, met de resultatenrekening en noot 3), Wise Q1 FY27 trading update, de homepage van de Wereldbank en het rapport *Remittance Prices Worldwide, Issue 54*; eigen berekeningen nagerekend | Alle cijfers kloppen met de bron | Alle cijfers van Wise kloppen (zie de lijst hieronder). Drie formuleringen waren onduidelijk of zonder bron en zijn aangepast. Cijfers van de Wereldbank kloppen ook: 6,36%, 14,99% (banken), 3,54% (digitale aanbieders) en het doel van 3% | Geslaagd |
 | T7 | Begrijpelijkheid: nieuwe gebruiker | Een familielid dat de site niet kende, heeft de site zonder hulp gelezen | Kan de twee oplossingen en de reden noemen, en begrijpt hoe ze werken | **Fout:** vond het "een interessant verhaal", maar begreep niet hoe stablecoins werken en hoe advies 1 dan zou werken | Fout, zie hieronder |
-| T7b | Hertest T7 | Hetzelfde familielid leest advies 1 opnieuw, na herstel | Kan in eigen woorden uitleggen hoe het geld via een stablecoin bij de ontvanger komt | *nog invullen* | Open |
+| T7b | Hertest T7 | Hetzelfde familielid leest advies 1 opnieuw, na herstel | Kan in eigen woorden uitleggen hoe het geld via een stablecoin bij de ontvanger komt | Legt het zelf uit: een stablecoin is gekoppeld aan een munt ("1 Scooby-dollar is 1 dollar") en die kun je versturen zonder dat er banken nodig zijn. Het risico en de keuze tussen twee routes noemde ze niet; de kern begreep ze wel | Geslaagd |
 | T35 | Opmaak na nieuwe app-schets | `advies.html` bekeken na het vervangen van de app-schets | Label "Voorbeeld met verzonnen cijfers" is opgemaakt | **Fout:** het label had geen opmaak meer | Fout, zie hieronder |
 | T35b | Hertest T35 | Zelfde pagina opnieuw bekeken; stijlblad gecontroleerd op losse regels; breedte op 375 px gemeten | Label opgemaakt; geen losse regels; geen horizontaal scrollen | Label weer opgemaakt; stijlblad klopt; alle pagina's 375 px, stappen onder elkaar, app-schets 343 px breed | Geslaagd |
-| T8 | Medestudent legt grafieken uit | Een medestudent legt grafiek 1 en 2 in eigen woorden uit | Uitleg klopt met de boodschap en de beperkingen | *nog invullen: naam, datum, wat er werd gezegd* | Open |
+| T8 | Medestudent legt grafieken uit | Een medestudent heeft in de les beide grafieken op `cijfers.html` uitgelegd, zonder hulp *(naam: zelf invullen)* | Uitleg klopt met de boodschap en de beperkingen | Beide grafieken waren duidelijk. **Twee punten onduidelijk:** grafiek 2: "Banken" zegt niet om welke banken het gaat (welk werelddeel?); grafiek 1: wat betekent "1.257,0", 1.257 miljoen? | Fout, zie hieronder |
+| T8b | Hertest T8 | Dezelfde medestudent kijkt opnieuw naar beide grafieken, na herstel | Weet dat het om wereldwijde gemiddelden en om miljoenen US-dollar gaat | *nog invullen* | Open |
 | T10 | Links na hernoemen | `bronnen.html` hernoemd naar `achtergrond.html`; alle links en ankers opnieuw gecontroleerd, ook naar `data/` en `#aannames` | Geen kapotte links | 60 lokale links en bestanden gecontroleerd, 0 fout; geen verwijzing meer naar `bronnen.html` | Geslaagd |
 | T11 | Grafiek 2: nieuwe opmerking | Opmerking over de Wise-staaf toegevoegd in `kosten-overboeking.svg` en de grafiek bekeken | Opmerking volledig zichtbaar | **Fout:** de opmerking was te lang en liep rechts uit de grafiek ("…metingen voor USD 2") | Fout, zie hieronder |
 | T11b | Hertest T11 | Na herstel dezelfde grafiek opnieuw bekeken | Opmerking volledig zichtbaar | Opmerking past op één regel binnen de grafiek | Geslaagd |
@@ -78,6 +79,19 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 - **Hertest (T36b):** de nieuwe opmaak laadt meteen, zonder handmatig verversen.
 - **Let op bij testen:** de browser kan een oude versie van het stijlblad bewaren. Zie je de oude opmaak, druk dan op
   Cmd+Shift+R (Mac) of Ctrl+F5 (Windows) om de pagina zonder cache te laden.
+
+## Gevonden fouten T8
+
+- **Fout (T8), grafiek 2:** bij "Banken" stond niet dat het een wereldwijd gemiddelde is. Een lezer vroeg zich af om
+  banken in welk werelddeel het ging.
+- **Herstel:** de staven heten nu "Banken, wereldwijd", "Alle aanbieders, wereldwijd" en "Digitale aanbieders,
+  wereldwijd", met eronder "gemiddelde, USD 200, Q3 2025". De ondertitel, de tabel, de uitleg, de alt-tekst en het
+  CSV-bestand zeggen hetzelfde. Bij de beperkingen staat nu dat het gaat om 367 routes van 48 naar 105 landen.
+- **Fout (T8), grafiek 1:** bij de getallen stond geen eenheid ("1.257,0"); die stond alleen in de ondertitel.
+- **Herstel:** elk getal heeft nu zijn eenheid ("USD 1.257,0 mln (50%)") en onder de as staat "miljoen US-dollar".
+  Grafiek 2 kreeg onder de as "% van het verstuurde bedrag".
+- **Hertest (T8b):** nog doen: dezelfde medestudent opnieuw laten kijken.
+- De grafieken hebben nu ook een versienummer (`?v=20261021c`), zodat de browser niet de oude versie laat zien.
 
 ## Uitwerking T6 (broncijfers)
 
