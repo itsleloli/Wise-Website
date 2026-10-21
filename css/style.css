@@ -706,7 +706,7 @@ ol.flow li:not(:last-child)::after {
 .app-hero { margin: 0 var(--s-16); padding: var(--s-16); background: var(--accent-strong); color: var(--on-accent); border-radius: var(--radius-lg); }
 .app-hero small { color: var(--on-accent-muted); }
 .app-hero-value { font-family: var(--font-heading); font-size: var(--fs-48); font-weight: 600; line-height: 1.1; margin: var(--s-4) 0; }
-.app-bars { display: flex; align-items: flex-end; gap: 6px; height: 48px; margin-top: var(--s-16); }
+.app-bars { display: flex; align-items: flex-end; gap: 6px; height: 36px; margin-top: var(--s-16); }
 .app-bar { flex: 1; height: var(--h); background: var(--on-accent-muted); opacity: 0.45; border-radius: 3px 3px 0 0; }
 .app-bar.is-now { opacity: 1; background: var(--on-accent); }
 .app-months { display: flex; gap: 6px; margin-top: var(--s-4); }
