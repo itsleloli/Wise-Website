@@ -17,7 +17,7 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T4 | Andere schermbreedte | Alle vier de pagina's bekeken op 375 px breed (telefoon); gemeten of de pagina breder wordt dan het scherm | Geen horizontaal scrollen, alles leesbaar | Paginabreedte overal 375 px; kaarten en tabellen stapelen onder elkaar | Geslaagd |
 | T5 | Grafieken: bronregel | Grafiek 2 op `cijfers.html` bekeken op 1280 px breed | Volledige bronregel zichtbaar | **Fout:** de eerste bronregel liep rechts uit de grafiek en werd afgekapt ("geraadpleegd 15-09-20…") | Fout, zie hieronder |
 | T5b | Hertest T5 | Na herstel dezelfde test opnieuw | Volledige bronregel zichtbaar | Bron staat op drie regels en is volledig leesbaar | Geslaagd |
-| T6 | Broncijfers | Op 21-10-2026 elk cijfer op de site naast de bron gelegd: Wise FY26 Results (zelfde jaarcijfers als het jaarverslag, met de resultatenrekening en noot 3), Wise Q1 FY27 trading update en de homepage van de Wereldbank; eigen berekeningen nagerekend | Alle cijfers kloppen met de bron | Alle cijfers van Wise kloppen (zie de lijst hieronder). Drie formuleringen waren onduidelijk of zonder bron en zijn aangepast. Wereldbank: 6,36% klopt; **14,99% (banken) en 3,54% (digitale aanbieders) nog zelf controleren** in het rapport (pdf niet automatisch te openen) | Grotendeels geslaagd, 2 cijfers open |
+| T6 | Broncijfers | Op 21-10-2026 elk cijfer op de site naast de bron gelegd: Wise FY26 Results (zelfde jaarcijfers als het jaarverslag, met de resultatenrekening en noot 3), Wise Q1 FY27 trading update, de homepage van de Wereldbank en het rapport *Remittance Prices Worldwide, Issue 54*; eigen berekeningen nagerekend | Alle cijfers kloppen met de bron | Alle cijfers van Wise kloppen (zie de lijst hieronder). Drie formuleringen waren onduidelijk of zonder bron en zijn aangepast. Cijfers van de Wereldbank kloppen ook: 6,36%, 14,99% (banken), 3,54% (digitale aanbieders) en het doel van 3% | Geslaagd |
 | T7 | Begrijpelijkheid: nieuwe gebruiker | Iemand die de site niet kent, beantwoordt zonder hulp de vraag op de startpagina | Kan de twee oplossingen en de reden noemen | *nog invullen* | Open |
 | T8 | Medestudent legt grafieken uit | Een medestudent legt grafiek 1 en 2 in eigen woorden uit | Uitleg klopt met de boodschap en de beperkingen | *nog invullen: naam, datum, wat er werd gezegd* | Open |
 | T10 | Links na hernoemen | `bronnen.html` hernoemd naar `achtergrond.html`; alle links en ankers opnieuw gecontroleerd, ook naar `data/` en `#aannames` | Geen kapotte links | 60 lokale links en bestanden gecontroleerd, 0 fout; geen verwijzing meer naar `bronnen.html` | Geslaagd |
@@ -55,7 +55,7 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 
 Gecontroleerd op 21 oktober 2026. Bronnen: *Wise FY26 Results* (26 juni 2026, met de resultatenrekening en noot 3
 "Transaction revenue by nature"), *Wise Q1 FY27 trading update* (17 juli 2026) en de homepage van Remittance Prices
-Worldwide van de Wereldbank.
+Worldwide van de Wereldbank, en het rapport *Remittance Prices Worldwide Quarterly, Issue 54* (september 2025).
 
 | Cijfer op de site | Waarde in de bron | Klopt? |
 |---|---|---|
@@ -73,7 +73,9 @@ Worldwide van de Wereldbank.
 | Directe aansluitingen in Japan (Zengin) en Brazilië (PIX) | "two new direct connections in Brazil and Japan" | Ja |
 | USD 132 per klant, 189.000 klanten, USD 25 mln, USD 5 mln | Nagerekend: 2.502,8 / 18,9 = 132,4; 1% van 18,9 mln; 189.000 × 132,4; 1% van 513,6 | Ja |
 | Wereldgemiddelde 6,36% (Q3 2025) | Homepage Wereldbank: "an average of 6.36 percent" | Ja |
-| Banken 14,99% en digitale aanbieders 3,54% (Q3 2025) | *nog zelf opzoeken in het rapport van de Wereldbank* | Open |
+| Banken 14,99% (Q3 2025) | Issue 54: "Banks remain the most expensive type of service provider, with an average cost of 14.99 percent" | Ja |
+| Volledig digitale aanbieders 3,54% (Q3 2025) | Issue 54: "The Digital-only MTO index experienced a decrease to 3.54 percent from 3.55 percent in Q1 2025" | Ja |
+| Doel van 3% | Issue 54: "the G20 commitment to reduce the global average to 3 percent" | Ja |
 
 **Aangepast na de controle:**
 - **Start:** "(was 0,58%)" werd "(boekjaar 2025: 0,58%)". De 0,58% is van twee jaar eerder; vlak ervoor was het 0,52%.
