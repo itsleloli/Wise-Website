@@ -105,7 +105,7 @@ de kop uit beeld is.
 - Zonder JavaScript is alles meteen zichtbaar; de animaties veranderen niets aan de inhoud.
 - Er wordt alleen met doorzichtigheid (opacity) gewerkt, niet met `visibility`, zodat tekst altijd vindbaar is
   met Ctrl+F en leesbaar blijft voor schermlezers.
-- Tailwind, DaisyUI en AutoAnimate zijn bewust niet gebruikt: zie de AI-log (logmoment 4).
+- Tailwind, DaisyUI en AutoAnimate zijn bewust niet gebruikt: zie de AI-log (logmoment 1).
 
 ## Opmerkingen
 
