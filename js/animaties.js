@@ -97,7 +97,7 @@
   });
 
   /* 3. Blokken schuiven in beeld */
-  var blokken = ".section-head, .stats li, .step, .card, figure.chart, .explain, .callout, .proto, .table-scroll, .content-section, ol.plan li";
+  var blokken = ".section-head, .stats li, .step, .card, figure.chart, .explain, .callout, .proto, .table-scroll, .content-section, ol.plan li, ol.flow li, .howto-note";
   var doelen = gsap.utils.toArray(blokken).filter(function (el) {
     return !el.closest(".page-hero") && !el.parentElement.closest(blokken);
   });

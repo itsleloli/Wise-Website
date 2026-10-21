@@ -42,7 +42,7 @@ een andere plek of computer. Alleen de links naar de externe bronnen hebben inte
 wise-website/
 ├── index.html                  Start: de vraag, vier kerncijfers en het verhaal in drie stappen
 ├── cijfers.html                De cijfers: grafiek 1 en 2 met uitleg, beperkingen en tabel
-├── advies.html                 Het advies: de twee pijlers en een schets van het overzicht in de app
+├── advies.html                 Het advies: advies 1 en 2, met uitleg en een schets van het overzicht in de app
 ├── achtergrond.html            Achtergrond: begrippen, perioden, beperkingen en bronnen
 ├── css/
 │   └── style.css               Opmaak van alle pagina's, met design tokens bovenaan
@@ -89,7 +89,7 @@ via CSS, zodat de witte tekst altijd leesbaar blijft.
 Achtergrond heeft geen foto maar een eigen getekende routekaart: echte steden op hun plek op een platte wereldkaart
 (alleen lengte- en breedtegraden, geen kustlijnen). Londen is het middelpunt, want daar zit Wise. Doorgetrokken lijnen
 zijn directe aansluitingen, met Zengin (Tokio) en PIX (São Paulo) uit het rapport. De gestreepte lijn naar "?" is de
-extra route via stablecoins naar een land zonder directe aansluiting (pijler 1); die plek is illustratief en staat
+extra route via stablecoins naar een land zonder directe aansluiting (advies 1); die plek is illustratief en staat
 niet voor een echt land. De kaart staat als SVG direct in `achtergrond.html`, zodat GSAP de lijnen kan laten tekenen.
 
 ## Animaties
@@ -115,5 +115,7 @@ de kop uit beeld is.
   afbeelding wordt geladen kan de lettertypes van de site niet gebruiken.
 - De Open Graph-tags werken pas als de site ooit online staat; lokaal hebben ze geen effect.
 - Onder elke grafiek staan titel, eenheid, periode en bron, een uitleg, de beperkingen en de cijfers als tabel.
+- Het advies bestaat uit twee delen, "Advies 1" (stablecoins als extra route, met een uitleg in vier stappen) en
+  "Advies 2" (persoonlijk overzicht in de app). In het adviesrapport heten deze twee de pijlers.
 - Het overzicht in de app op `advies.html` is een schets met verzonnen cijfers en geen echt ontwerp van Wise.
 - Dit is geen website van Wise. Het icoon is eigen werk; er is geen logo van Wise gebruikt.

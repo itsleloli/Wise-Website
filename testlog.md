@@ -18,7 +18,10 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T5 | Grafieken: bronregel | Grafiek 2 op `cijfers.html` bekeken op 1280 px breed | Volledige bronregel zichtbaar | **Fout:** de eerste bronregel liep rechts uit de grafiek en werd afgekapt ("geraadpleegd 15-09-20…") | Fout, zie hieronder |
 | T5b | Hertest T5 | Na herstel dezelfde test opnieuw | Volledige bronregel zichtbaar | Bron staat op drie regels en is volledig leesbaar | Geslaagd |
 | T6 | Broncijfers | Op 21-10-2026 elk cijfer op de site naast de bron gelegd: Wise FY26 Results (zelfde jaarcijfers als het jaarverslag, met de resultatenrekening en noot 3), Wise Q1 FY27 trading update, de homepage van de Wereldbank en het rapport *Remittance Prices Worldwide, Issue 54*; eigen berekeningen nagerekend | Alle cijfers kloppen met de bron | Alle cijfers van Wise kloppen (zie de lijst hieronder). Drie formuleringen waren onduidelijk of zonder bron en zijn aangepast. Cijfers van de Wereldbank kloppen ook: 6,36%, 14,99% (banken), 3,54% (digitale aanbieders) en het doel van 3% | Geslaagd |
-| T7 | Begrijpelijkheid: nieuwe gebruiker | Iemand die de site niet kent, beantwoordt zonder hulp de vraag op de startpagina | Kan de twee oplossingen en de reden noemen | *nog invullen* | Open |
+| T7 | Begrijpelijkheid: nieuwe gebruiker | Een familielid dat de site niet kende, heeft de site zonder hulp gelezen | Kan de twee oplossingen en de reden noemen, en begrijpt hoe ze werken | **Fout:** vond het "een interessant verhaal", maar begreep niet hoe stablecoins werken en hoe advies 1 dan zou werken | Fout, zie hieronder |
+| T7b | Hertest T7 | Hetzelfde familielid leest advies 1 opnieuw, na herstel | Kan in eigen woorden uitleggen hoe het geld via een stablecoin bij de ontvanger komt | *nog invullen* | Open |
+| T35 | Opmaak na nieuwe app-schets | `advies.html` bekeken na het vervangen van de app-schets | Label "Voorbeeld met verzonnen cijfers" is opgemaakt | **Fout:** het label had geen opmaak meer | Fout, zie hieronder |
+| T35b | Hertest T35 | Zelfde pagina opnieuw bekeken; stijlblad gecontroleerd op losse regels; breedte op 375 px gemeten | Label opgemaakt; geen losse regels; geen horizontaal scrollen | Label weer opgemaakt; stijlblad klopt; alle pagina's 375 px, stappen onder elkaar, app-schets 343 px breed | Geslaagd |
 | T8 | Medestudent legt grafieken uit | Een medestudent legt grafiek 1 en 2 in eigen woorden uit | Uitleg klopt met de boodschap en de beperkingen | *nog invullen: naam, datum, wat er werd gezegd* | Open |
 | T10 | Links na hernoemen | `bronnen.html` hernoemd naar `achtergrond.html`; alle links en ankers opnieuw gecontroleerd, ook naar `data/` en `#aannames` | Geen kapotte links | 60 lokale links en bestanden gecontroleerd, 0 fout; geen verwijzing meer naar `bronnen.html` | Geslaagd |
 | T11 | Grafiek 2: nieuwe opmerking | Opmerking over de Wise-staaf toegevoegd in `kosten-overboeking.svg` en de grafiek bekeken | Opmerking volledig zichtbaar | **Fout:** de opmerking was te lang en liep rechts uit de grafiek ("…metingen voor USD 2") | Fout, zie hieronder |
@@ -50,6 +53,23 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T33b | Hertest T33 | Zelfde weergave na herstel | Alle namen vrij leesbaar | Lijnen lopen achter de namen langs; alle namen leesbaar | Geslaagd |
 | T34 | Routekaart: animatie en breedte | Animatie gevolgd; breedte op 375 px gemeten; console bekeken | Steden, namen, routes, extra route en stroom verschijnen op volgorde; geen horizontaal scrollen; geen fouten | 6/6 steden, 4/4 routes getekend, extra route en stroom zichtbaar en in beweging na 4,7 s; alle pagina's 375 px; geen fouten | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
+
+## Gevonden fouten T7 en T35
+
+- **Fout (T7):** een nieuwe lezer begreep niet hoe stablecoins werken en hoe advies 1 in de praktijk zou gaan. De site
+  zei wel *wat* het advies is, maar niet *hoe* het werkt.
+- **Herstel:** bij advies 1 staat nu "Zo werkt het, in vier stappen": wat een stablecoin is (met een vergelijking met
+  een pakketje en een koerier), de vier stappen van euro's tot lokaal geld bij de ontvanger, en hoe Wise per overboeking
+  kiest tussen de twee routes. De uitleg bij "stablecoin" op Achtergrond noemt nu voorbeelden (USDC, EURC) en verwijst
+  naar deze stappen. "Pijler 1 en 2" heten nu "Advies 1 en 2", omdat dat duidelijker is voor de lezer.
+- **Hertest (T7b):** nog doen: hetzelfde familielid advies 1 opnieuw laten lezen.
+- **Fout (T35):** bij het vervangen van de app-schets werden de oude stijlregels verwijderd, maar van één regel bleef de
+  inhoud achter zonder kop. De browser sloeg daardoor de volgende regel over: de opmaak van het label "Voorbeeld met
+  verzonnen cijfers".
+- **Herstel:** de losse regels verwijderd en het hele stijlblad gecontroleerd op losse declaraties en accolades.
+- **Hertest (T35b):** het label is weer opgemaakt.
+- **Let op bij testen:** de browser kan een oude versie van het stijlblad bewaren. Zie je de oude opmaak, druk dan op
+  Cmd+Shift+R (Mac) of Ctrl+F5 (Windows) om de pagina zonder cache te laden.
 
 ## Uitwerking T6 (broncijfers)
 
