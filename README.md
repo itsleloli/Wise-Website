@@ -109,6 +109,10 @@ de kop uit beeld is.
 
 ## Opmerkingen
 
+- De links naar `css/style.css` en `js/animaties.js` hebben een versienummer (`?v=20261021`). Verander je het
+  stijlblad of het script, verhoog dan dat nummer in alle vier de pagina's. Anders kan een browser een oude, bewaarde
+  versie blijven gebruiken.
+
 - De CSV-bestanden gebruiken een puntkomma en een decimale komma, zodat ze goed openen in een Nederlandse Excel.
 - De grafieken zijn losse SVG-bestanden. Ze zijn scherp op elk scherm en hebben geen JavaScript nodig. De tekst in
   de grafieken gebruikt IBM Plex Sans als die op de computer staat, anders de systeemletter: een SVG die als

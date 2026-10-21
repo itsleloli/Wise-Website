@@ -52,6 +52,8 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
 | T33 | Routekaart: namen leesbaar | Alle namen op de kaart bekeken op 1440 px | Geen lijn door een naam | **Fout:** "Amsterdam" werd doorkruist door de lijn naar Tokio, en na verplaatsen door de lijn naar Singapore | Fout, zie hieronder |
 | T33b | Hertest T33 | Zelfde weergave na herstel | Alle namen vrij leesbaar | Lijnen lopen achter de namen langs; alle namen leesbaar | Geslaagd |
 | T34 | Routekaart: animatie en breedte | Animatie gevolgd; breedte op 375 px gemeten; console bekeken | Steden, namen, routes, extra route en stroom verschijnen op volgorde; geen horizontaal scrollen; geen fouten | 6/6 steden, 4/4 routes getekend, extra route en stroom zichtbaar en in beweging na 4,7 s; alle pagina's 375 px; geen fouten | Geslaagd |
+| T36 | App-schets in de browser van de gebruiker | `advies.html` geopend in de eigen browser na de nieuwe app-schets | App-schets zichtbaar met de nieuwe opmaak | **Fout:** de telefoon was helemaal zwart en het label had geen rand: de browser gebruikte nog een oude, bewaarde versie van `style.css` bij de nieuwe HTML | Fout, zie hieronder |
+| T36b | Hertest T36 | Na herstel dezelfde pagina geladen, via de server en met een dubbelklik op het bestand | Nieuwe opmaak zonder handmatig verversen | Pagina laadt `style.css?v=20261021`; app-schets en label goed zichtbaar, ook als bestand (`file://`); 94 links, 0 fout | Geslaagd |
 | T9 | Andere browser | Site openen in Safari of Edge met dubbelklik op `index.html` | Zelfde resultaat als in Chrome | *nog invullen* | Open |
 
 ## Gevonden fouten T7 en T35
@@ -68,6 +70,12 @@ T32 tot en met T34 zijn uitgevoerd nadat het patroon een echte routekaart werd o
   verzonnen cijfers".
 - **Herstel:** de losse regels verwijderd en het hele stijlblad gecontroleerd op losse declaraties en accolades.
 - **Hertest (T35b):** het label is weer opgemaakt.
+- **Fout (T36):** in de browser van de gebruiker was de app-schets een zwart vlak. De browser had de nieuwe HTML geladen,
+  maar een oude, bewaarde versie van het stijlblad gebruikt. Zonder de nieuwe stijlen stond donkere tekst op de zwarte
+  telefoon.
+- **Herstel:** de links naar `css/style.css` en `js/animaties.js` hebben nu een versienummer (`?v=20261021`). Bij een
+  nieuw nummer haalt de browser altijd de nieuwste versie op, ook bij een dubbelklik op het bestand.
+- **Hertest (T36b):** de nieuwe opmaak laadt meteen, zonder handmatig verversen.
 - **Let op bij testen:** de browser kan een oude versie van het stijlblad bewaren. Zie je de oude opmaak, druk dan op
   Cmd+Shift+R (Mac) of Ctrl+F5 (Windows) om de pagina zonder cache te laden.
 
